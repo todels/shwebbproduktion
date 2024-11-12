@@ -366,12 +366,10 @@ body {
   margin-left: 20px;
   background: url("icons/arrow.svg") no-repeat center center;
   background-size: contain;
-}
-
-/* Footer Section */
+} /* Footer Section */
 .footer {
   background-color: #fcfbf9;
-  padding: 50px 0;
+  padding: 70px 0;
   color: #000;
   text-align: center;
 }
@@ -380,9 +378,9 @@ body {
   display: flex;
   justify-content: space-between;
   align-items: flex-start;
-  max-width: 1200px;
+  max-width: 1440px;
   margin: 0 auto;
-  gap: 40px;
+  gap: 176px;
 }
 
 .footer-logo {
@@ -395,6 +393,7 @@ body {
 .footer-social {
   text-align: left;
   flex: 1;
+  padding: 0 20px;
 }
 
 .footer-nav p,
@@ -402,7 +401,7 @@ body {
 .footer-social p {
   font-weight: 600;
   font-size: 18px;
-  margin-bottom: 10px;
+  margin-bottom: 15px;
 }
 
 .footer-nav ul,
@@ -410,13 +409,37 @@ body {
 .footer-social ul {
   list-style-type: none;
   padding: 0;
+  margin: 0;
 }
 
-.footer-nav ul li,
-.footer-contact ul li,
+/* Social Icon Styling */
+.footer-social ul {
+  display: flex;
+  gap: 16px; /* Adjust spacing between icons */
+  padding: 0;
+  margin: 0;
+  align-items: center;
+}
+
 .footer-social ul li {
-  font-size: 16px;
-  margin-bottom: 8px;
+  margin: 0;
+}
+
+.footer-social ul li a {
+  display: block;
+}
+
+.footer-social .social-icon {
+  width: 24px; /* Adjust size as needed */
+  height: 24px;
+}
+
+.footer-social .social-link {
+  transition: opacity 0.3s ease;
+}
+
+.footer-social .social-link:hover {
+  opacity: 0.7; /* Optional hover effect */
 }
 
 /* Remove the blue link color and underlines */
@@ -436,6 +459,34 @@ body {
   padding-top: 20px;
   margin-top: 40px;
   font-size: 14px;
+}
+
+/* Mobile Responsive Footer */
+@media (max-width: 768px) {
+  .footer-content {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 30px;
+    padding: 0 20px;
+  }
+
+  .footer-nav,
+  .footer-contact,
+  .footer-social {
+    width: 100%;
+    padding: 0;
+  }
+
+  .footer-bottom {
+    text-align: center;
+    padding: 20px 0;
+    font-size: 14px;
+  }
+
+  /* Center social icons on mobile */
+  .footer-social ul {
+    justify-content: flex-start;
+  }
 }
 
 /* New page - Guide Cards Section */
