@@ -56,21 +56,24 @@ body {
   padding: 16px 20px;
   display: flex;
   align-items: center;
-  justify-content: center; /* Centers the navigation links */
+  justify-content: center;
   gap: 40px;
   position: relative;
+  flex-wrap: wrap; /* Allows items to wrap on smaller screens */
 }
 
 /* Logo aligned to the left */
 .logo {
   position: absolute;
   left: 20px;
+  flex-shrink: 0; /* Prevents the logo from shrinking */
 }
 
 /* Desktop Navigation Links */
 .nav-links {
   display: flex;
   gap: 40px;
+  flex-wrap: wrap; /* Wraps items if necessary */
 }
 
 .nav-item {
@@ -88,10 +91,10 @@ body {
   position: absolute;
   width: 0;
   height: 2px;
-  background-color: #7100fc; /* Set the underline color */
-  bottom: -4px; /* Position the underline slightly below the text */
+  background-color: #7100fc;
+  bottom: -4px;
   left: 0;
-  transition: width 0.3s ease; /* Smooth animation */
+  transition: width 0.3s ease;
 }
 
 .nav-item:hover {
@@ -100,7 +103,7 @@ body {
 }
 
 .nav-item:hover::after {
-  width: 100%; /* Animate to full width on hover */
+  width: 100%;
 }
 
 /* CTA Button aligned to the right */
@@ -115,6 +118,7 @@ body {
   transition: background-color 0.3s;
   position: absolute;
   right: 20px;
+  flex-shrink: 0; /* Prevents the button from shrinking */
 }
 
 .nav-cta-button:hover {
@@ -129,6 +133,9 @@ body {
   border: none;
   cursor: pointer;
   color: #000;
+  position: absolute;
+  right: 20px;
+  z-index: 1001;
 }
 
 /* Mobile Menu */
@@ -173,8 +180,6 @@ body {
 
   .hamburger {
     display: block; /* Show hamburger button on mobile */
-    position: absolute;
-    right: 20px;
   }
 }
 
