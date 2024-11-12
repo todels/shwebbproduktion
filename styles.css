@@ -48,32 +48,31 @@ body {
   box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
   display: flex;
   justify-content: center;
+  padding: 10px 0; /* Ensures padding for better alignment */
 }
 
 .navbar-container {
   width: 100%;
   max-width: 1200px;
-  padding: 16px 20px;
+  padding: 0 20px;
   display: flex;
   align-items: center;
-  justify-content: center;
+  justify-content: center; /* Centers the navigation links */
   gap: 40px;
   position: relative;
-  flex-wrap: wrap; /* Allows items to wrap on smaller screens */
 }
 
 /* Logo aligned to the left */
 .logo {
   position: absolute;
   left: 20px;
-  flex-shrink: 0; /* Prevents the logo from shrinking */
+  flex-shrink: 0;
 }
 
 /* Desktop Navigation Links */
 .nav-links {
   display: flex;
   gap: 40px;
-  flex-wrap: wrap; /* Wraps items if necessary */
 }
 
 .nav-item {
@@ -118,7 +117,7 @@ body {
   transition: background-color 0.3s;
   position: absolute;
   right: 20px;
-  flex-shrink: 0; /* Prevents the button from shrinking */
+  flex-shrink: 0;
 }
 
 .nav-cta-button:hover {
@@ -180,6 +179,11 @@ body {
 
   .hamburger {
     display: block; /* Show hamburger button on mobile */
+  }
+
+  /* Adjust padding to prevent navbar items from overflowing */
+  .navbar-container {
+    padding: 0 10px;
   }
 }
 
