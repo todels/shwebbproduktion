@@ -36,82 +36,53 @@
       <button class="nav-cta-button">Få tillgång</button>
     </div>
 
-    <!-- Form Section -->
-    <section class="form-section">
-      <h1>Få tidig tillgång till Easy E</h1>
-      <p>
-        Fyll i formuläret för att få tidig tillgång till beta-versionen av Easy
-        E! Bli en av de första att prova våra nya funktioner och hjälp oss att
-        göra tjänsten ännu bättre.
-      </p>
+    <!-- Contact Section -->
+    <section class="contact-section">
+      <div class="contact-form">
+        <h1>Let's get in touch!</h1>
+        <form action="confirmation.html" method="post">
+          <label for="name">Name*</label>
+          <input
+            type="text"
+            id="name"
+            name="name"
+            placeholder="Adryan Yousef"
+            required
+          />
 
-      <form class="signup-form" action="submit_form.html" method="POST">
-        <label for="firstName">Förnamn*</label>
-        <input
-          type="text"
-          id="firstName"
-          name="firstName"
-          placeholder="Eric"
-          required
-        />
+          <label for="email">Email*</label>
+          <input
+            type="email"
+            id="email"
+            name="email"
+            placeholder="Enter your email"
+            required
+          />
 
-        <label for="lastName">Efternamn*</label>
-        <input
-          type="text"
-          id="lastName"
-          name="lastName"
-          placeholder="Wright"
-          required
-        />
+          <label for="options">Options:</label>
+          <select id="options" name="options" required>
+            <option value="" disabled selected>Choose an option</option>
+            <option value="design">Design</option>
+            <option value="collaboration">Collaboration</option>
+            <option value="innovation">Innovation</option>
+            <option value="feedback">Feedback</option>
+          </select>
 
-        <label for="email">Email*</label>
-        <input
-          type="email"
-          id="email"
-          name="email"
-          placeholder="easye@eze.com"
-          required
-        />
+          <label for="message">Message*</label>
+          <textarea
+            id="message"
+            name="message"
+            placeholder="Write here..."
+            required
+          ></textarea>
 
-        <label for="phone">Telefon*</label>
-        <input
-          type="tel"
-          id="phone"
-          name="phone"
-          placeholder="Telefonnummer"
-          required
-        />
-
-        <p>Välj anledningen till varför du vill ha beta åtkomst:</p>
-        <div class="reason-options">
-          <label
-            ><input type="radio" name="reason" value="Jobb" checked />
-            Jobb</label
-          >
-          <label
-            ><input type="radio" name="reason" value="Skola" /> Skola</label
-          >
-          <label
-            ><input type="radio" name="reason" value="Freelance" />
-            Freelance</label
-          >
-          <label
-            ><input type="radio" name="reason" value="Övrigt" /> Övrigt</label
-          >
-        </div>
-
-        <label for="message">Meddelande</label>
-        <textarea
-          id="message"
-          name="message"
-          placeholder="Skriv här..."
-        ></textarea>
-
-        <button type="submit" class="submit-button">Skicka ansökan</button>
-      </form>
+          <button type="submit">Submit</button>
+        </form>
+      </div>
     </section>
 
-    <!-- Include Footer -->
+
+    <!-- Footer -->
     <footer class="footer">
       <div class="footer-content">
         <div class="footer-logo footer-section">
@@ -135,39 +106,33 @@
             <li>12 Compton St</li>
           </ul>
         </div>
-        <div class="footer-social footer-section">
-          <p>Följ oss</p>
-          <ul>
-            <li>
-              <a href="#" class="social-link"
-                ><img
-                  src="icons/instagram.svg"
-                  alt="Instagram"
-                  class="social-icon"
-              /></a>
-            </li>
-            <li>
-              <a href="#" class="social-link"
-                ><img
-                  src="icons/linkedin.svg"
-                  alt="LinkedIn"
-                  class="social-icon"
-              /></a>
-            </li>
-          </ul>
-        </div>
+      <div class="footer-social footer-section">
+  <p>Följ oss</p>
+  <ul>
+    <li>
+      <a href="#" class="social-link">
+        <img src="icons/instagram.svg" alt="Instagram" class="social-icon">
+      </a>
+    </li>
+    <li>
+      <a href="#" class="social-link">
+        <img src="icons/linkedin.svg" alt="LinkedIn" class="social-icon">
+      </a>
+    </li>
+  </ul>
+</div>
+
       </div>
       <div class="footer-bottom">
         <p>Copyright © 2024 Adryan, Ludvig & Stilianos</p>
-      </div>
+      </div> 
     </footer>
 
-    <!-- JavaScript to toggle the mobile menu visibility -->
-    <script>
-      function toggleMenu() {
-        const mobileMenu = document.querySelector(".mobile-menu");
-        mobileMenu.classList.toggle("active");
-      }
-    </script>
+  </body>
+</html>
+
+<!-- OBS! All text och alt text är ai genererade för att spara lite tid och lät mig få djupdyka i uppgiften, gäller alla sidor -->
+
+
   </body>
 </html>
