@@ -354,28 +354,6 @@ body {
   max-width: 600px;
 }
 
-.cards {
-  display: flex;
-  justify-content: center; /* Center the cards horizontally */
-  align-items: center; /* Center the cards vertically */
-  gap: 20px;
-  flex-wrap: wrap;
-  margin-top: 40px;
-  padding: 0 20px; /* Add padding to prevent cards from sticking to the edges */
-}
-
-.card {
-  background-color: #f8f8f8;
-  border-radius: 10px;
-  width: 300px;
-  overflow: hidden;
-  transition: transform 0.3s ease;
-  display: flex;
-  flex-direction: column;
-  justify-content: space-between;
-  text-align: center; /* Center text in the cards */
-}
-
 @media (max-width: 768px) {
   .cards {
     flex-direction: column;
