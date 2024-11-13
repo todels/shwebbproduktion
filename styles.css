@@ -780,7 +780,3 @@ body {
     gap: 15px;
   }
 }
-.title-section {
-  margin-top: 100px; /* Adjust the value as needed to move it further down */
-  text-align: center; /* Center align text if desired */
-}
