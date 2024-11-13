@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Confirmation</title>
+    <link rel="icon" type="image/icon" href="favicon.ico" />
+
+    <!-- Import of Inter font from Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;700&display=swap"
+      rel="stylesheet"
+    />
+
+    <!-- Link to CSS file (contact.css for shared styling) -->
+    <link rel="stylesheet" href="contact.css" />
+  </head>
+  <body>
+    <!-- Nav Bar -->
+    <nav>
+      <a href="index.html" class="logo">
+        <img src="adryan_logo_white.svg" alt="Adryans Personal Logo" />
+      </a>
+
+      <div class="hamburger" onclick="toggleMenu()">
+        <span></span>
+        <span></span>
+        <span></span>
+      </div>
+      <ul class="nav-links">
+        <li><a href="index.html">Home</a></li>
+        <li><a href="features.html">Features</a></li>
+        <li><a href="about.html">About</a></li>
+        <li><a href="contact.html">Contact</a></li>
+      </ul>
+    </nav>
+
+    <!-- Confirmation Section -->
+    <section class="contact-section">
+      <div class="contact-form">
+        <h1>Thank you!</h1>
+        <p>
+          Your message has been successfully submitted. We will be in touch
+          shortly.
+        </p>
+        <a href="index.html" class="button-link">Return to Home</a>
+      </div>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+      <div class="footer-content">
+        <div class="footer-socials">
+          <a href="https://www.linkedin.com/in/adryanyousef/" target="_blank">
+            <img src="linkedin.svg" alt="LinkedIn" />
+          </a>
+          <a href="https://www.instagram.com/adryanyousef/" target="_blank">
+            <img src="instagram.svg" alt="Instagram" />
+          </a>
+        </div>
+        <a href="mailto:adyo24@suni.se">adyo24@suni.se</a>
+        <p>Copyright © 2024 Adryan Yousef all rights reserved.</p>
+      </div>
+    </footer>
+
+    <script>
+      function toggleMenu() {
+        const navLinks = document.querySelector(".nav-links");
+        navLinks.classList.toggle("active");
+      }
+    </script>
+  </body>
+</html>
