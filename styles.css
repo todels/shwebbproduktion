@@ -638,3 +638,149 @@ body {
   text-align: center;
   margin: 60px 0;
 }
+/* Contact Section Layout */
+.contact-section {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 0;
+  margin: 0 auto;
+  width: 600px; /* Set width based on Figma */
+  gap: 40px; /* Vertical gap between sections */
+  flex-direction: column;
+  background-color: #fcfbf9;
+}
+
+.contact-form {
+  display: flex;
+  flex-direction: column;
+  align-items: center; /* Center-align content inside the form */
+  padding: 0; /* Remove any padding */
+  gap: 20px; /* Set gap between elements inside the form */
+  width: 100%; /* Full width of the container */
+  max-width: 600px; /* Align with Figma width */
+}
+
+/* Form Title Styling */
+.contact-form h1 {
+  font-size: 24px;
+  font-weight: 600;
+  text-align: center;
+  margin-bottom: 20px;
+  color: #000;
+}
+
+/* Input Fields Row with Gap */
+.form-group {
+  display: flex;
+  gap: 20px; /* Space between inputs in the same row */
+  width: 100%;
+  justify-content: space-between;
+}
+
+.form-field {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+}
+
+/* Label Styling (Left-Aligned) */
+.contact-form label {
+  font-size: 0.9rem;
+  color: #000;
+  font-weight: 500;
+  margin-bottom: 5px;
+  text-align: left;
+}
+
+/* Input and Textarea Styling */
+.contact-form input,
+.contact-form textarea {
+  background-color: #f9f9f9;
+  border: 1px solid #d0d0d0;
+  border-radius: 28px;
+  padding: 10px 15px;
+  color: #000;
+  font-size: 1rem;
+  font-weight: 400;
+  box-sizing: border-box;
+  width: 100%; /* Full width of each field */
+}
+
+.contact-form input::placeholder,
+.contact-form textarea::placeholder {
+  color: #b0b0b0;
+}
+
+/* Styling for Radio Button Options */
+.radio-options {
+  display: flex;
+  gap: 10px;
+  margin: 10px 0 20px;
+  justify-content: center; /* Center the radio button group */
+}
+
+.radio-options label {
+  background-color: #f9f9f9;
+  border: 1px solid #d0d0d0;
+  border-radius: 200px;
+  padding: 8px 15px;
+  font-size: 1rem;
+  color: #000;
+  cursor: pointer;
+  transition: background-color 0.3s, color 0.3s;
+}
+
+.radio-options input[type="radio"] {
+  display: none;
+}
+
+.radio-options input[type="radio"]:checked + label {
+  background-color: #000;
+  color: #fff;
+}
+
+/* Textarea Styling */
+.contact-form textarea {
+  resize: vertical;
+  min-height: 100px;
+  box-shadow: 0px 1px 2px rgba(0, 0, 0, 0.1);
+}
+
+/* Submit Button Styling */
+.contact-form button {
+  background-color: #000;
+  color: #fff;
+  border: none;
+  border-radius: 24px;
+  padding: 12px 20px;
+  font-size: 1rem;
+  font-weight: 600;
+  cursor: pointer;
+  width: fit-content;
+  margin-top: 20px;
+  align-self: center; /* Center the button within the form */
+  transition: background-color 0.3s;
+}
+
+.contact-form button:hover {
+  background-color: #7100fc;
+}
+
+/* Responsive Adjustments */
+@media screen and (max-width: 768px) {
+  .contact-section {
+    width: 100%;
+    padding: 20px;
+  }
+
+  .form-group {
+    flex-direction: column;
+    gap: 15px;
+  }
+}
+.title-section {
+  margin-top: 100px; /* Adjust the value as needed to move it further down */
+  text-align: center; /* Center align text if desired */
+}
