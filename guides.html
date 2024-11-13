@@ -10,46 +10,45 @@
     <link href="https://fonts.googleapis.com/css2?family=Gochi+Hand&family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap" rel="stylesheet">  
   </head>
   <body>
+    <nav class="navbar">
+      <div class="navbar-container">
+        <!-- Logo with link to index.html -->
+        <div class="logo">
+          <a href="index.html">
+            <img src="icons/logo.svg" alt="Logo" />
+          </a>
+        </div>
 
- <nav class="navbar">
-  <div class="navbar-container">
-    <!-- Logo with link to index.html -->
-    <div class="logo">
-      <a href="index.html">
-        <img src="icons/logo.svg" alt="Logo" />
-      </a>
-    </div>
+        <!-- Desktop Navigation Links -->
+        <div class="nav-links">
+          <a href="guides.html" class="nav-item">Nybörjarguides</a> <!-- Link to guides.html -->
+          <a href="resurser.html" class="nav-item">Resurser</a> <!-- Link to resources.html -->
+          <a href="faq.html" class="nav-item">FAQ</a> <!-- Anchor link to FAQ section -->
+        </div>
 
-    <!-- Desktop Navigation Links -->
-    <div class="nav-links">
+        <!-- Desktop CTA Button linking to Contact Section -->
+        <a href="contact.html" class="nav-cta-button">Få tillgång</a> <!-- Link to contact section -->
+
+        <!-- Hamburger Button for Mobile -->
+        <button class="hamburger" onclick="toggleMenu()">☰</button>
+      </div>
+    </nav>
+
+    <!-- Mobile Menu (hidden initially) -->
+    <div class="mobile-menu">
       <a href="guides.html" class="nav-item">Nybörjarguides</a> <!-- Link to guides.html -->
       <a href="resurser.html" class="nav-item">Resurser</a> <!-- Link to resources.html -->
       <a href="faq.html" class="nav-item">FAQ</a> <!-- Anchor link to FAQ section -->
+      <a href="contact.html" class="nav-cta-button">Få tillgång</a> <!-- Link to contact section -->
     </div>
 
-    <!-- Desktop CTA Button linking to Contact Section -->
-    <a href="contact.html" class="nav-cta-button">Få tillgång</a> <!-- Link to contact section -->
-
-    <!-- Hamburger Button for Mobile -->
-    <button class="hamburger" onclick="toggleMenu()">☰</button>
-  </div>
-</nav>
-
-<!-- Mobile Menu (hidden initially) -->
-<div class="mobile-menu">
-  <a href="guides.html" class="nav-item">Nybörjarguides</a> <!-- Link to guides.html -->
-  <a href="resurser.html" class="nav-item">Resurser</a> <!-- Link to resources.html -->
-  <a href="faq.html" class="nav-item">FAQ</a> <!-- Anchor link to FAQ section -->
-  <a href="contact.html" class="nav-cta-button">Få tillgång</a> <!-- Link to contact section -->
-</div>
-
-<!-- JavaScript to toggle the mobile menu visibility -->
-<script>
-  function toggleMenu() {
-    const mobileMenu = document.querySelector(".mobile-menu");
-    mobileMenu.classList.toggle("active");
-  }
-</script>
+    <!-- JavaScript to toggle the mobile menu visibility -->
+    <script>
+      function toggleMenu() {
+        const mobileMenu = document.querySelector(".mobile-menu");
+        mobileMenu.classList.toggle("active");
+      }
+    </script>
 
     <!-- Hero Section -->
     <div class="hero">
@@ -58,51 +57,51 @@
       <p>Våra nybörjarguider gör det enkelt att förstå och använda teknik</p>
     </div>
 
-   <!-- Guide Cards Section -->
-<section class="guide-cards">
-    <div class="guide-header">
-      <!-- Handwritten SVG for "Kom igång enkelt" -->
-      <img src="other/handwritten_2.svg" alt="Kom igång enkelt" class="handwritten-heading">
-      <!-- Title and Description -->
-      <h2>Teknik för Nybörjare</h2>
-      <p>Våra nybörjarguider gör det enkelt att förstå och använda teknik</p>
-    </div>
-    
-    <div class="cards">
-      <div class="card">
-        <div class="card-icon">
-          <img src="icons/security.svg" alt="Security Icon">
-        </div>
-        <h3>Säkerhetsgrunder</h3>
-        <p>Enkla och praktiska guider om hur du skyddar din information online och säkrar dina enheter.</p>
-        <button>Läs mer →</button>
+    <!-- Guide Cards Section -->
+    <section class="guide-cards">
+      <div class="guide-header">
+        <!-- Handwritten SVG for "Kom igång enkelt" -->
+        <img src="other/handwritten_2.svg" alt="Kom igång enkelt" class="handwritten-heading">
+        <!-- Title and Description -->
+        <h2>Teknik för Nybörjare</h2>
+        <p>Våra nybörjarguider gör det enkelt att förstå och använda teknik</p>
       </div>
-      <div class="card">
-        <div class="card-icon">
-          <img src="icons/at.svg" alt="Social Media Icon">
+      
+      <div class="cards">
+        <div class="card">
+          <div class="card-icon">
+            <img src="icons/security.svg" alt="Security Icon">
+          </div>
+          <h3>Säkerhetsgrunder</h3>
+          <p>Enkla och praktiska guider om hur du skyddar din information online och säkrar dina enheter.</p>
+          <button>Läs mer →</button>
         </div>
-        <h3>Sociala Medier</h3>
-        <p>Allt du behöver veta för att använda sociala medier på ett tryggt och effektivt sätt.</p>
-        <button>Läs mer →</button>
-      </div>
-      <div class="card">
-        <div class="card-icon">
-          <img src="icons/leaf.svg" alt="Computer Icon">
+        <div class="card">
+          <div class="card-icon">
+            <img src="icons/at.svg" alt="Social Media Icon">
+          </div>
+          <h3>Sociala Medier</h3>
+          <p>Allt du behöver veta för att använda sociala medier på ett tryggt och effektivt sätt.</p>
+          <button>Läs mer →</button>
         </div>
-        <h3>Datorns Grundläggande Funktioner</h3>
-        <p>Förstå de viktigaste funktionerna och processerna på en dator, från att navigera i operativsystemet till att hantera filer.</p>
-        <button>Läs mer →</button>
-      </div>
-      <div class="card">
-        <div class="card-icon">
-          <img src="icons/internet.svg" alt="Internet Icon">
+        <div class="card">
+          <div class="card-icon">
+            <img src="icons/leaf.svg" alt="Computer Icon">
+          </div>
+          <h3>Datorns Grundläggande Funktioner</h3>
+          <p>Förstå de viktigaste funktionerna och processerna på en dator, från att navigera i operativsystemet till att hantera filer.</p>
+          <button>Läs mer →</button>
         </div>
-        <h3>Internet 101</h3>
-        <p>Denna kategori täcker grunderna i att surfa på nätet, använda sökmotorer och undvika vanliga fallgropar online.</p>
-        <button>Läs mer →</button>
+        <div class="card">
+          <div class="card-icon">
+            <img src="icons/internet.svg" alt="Internet Icon">
+          </div>
+          <h3>Internet 101</h3>
+          <p>Denna kategori täcker grunderna i att surfa på nätet, använda sökmotorer och undvika vanliga fallgropar online.</p>
+          <button>Läs mer →</button>
+        </div>
       </div>
-    </div>
-  </section>
+    </section>
   
   
 
@@ -115,61 +114,59 @@
       </button>
     </section>
 
-  <!-- Footer -->
-<footer class="footer">
-  <div class="footer-content">
-    <!-- Footer Logo -->
-    <div class="footer-logo footer-section">
-      <a href="index.html">
-        <img src="icons/logo.svg" alt="Logo" />
-      </a>
-    </div>
-
-    <!-- Footer Navigation Links -->
-    <div class="footer-nav footer-section">
-      <p>Navigation</p>
-      <ul>
-        <li><a href="index.html">Hem</a></li> <!-- Link to home page -->
-        <li><a href="guides.html">Guides</a></li> <!-- Link to guides page -->
-        <li><a href="resurser.html">Verktyg & Resurser</a></li> <!-- Link to resources page -->
-        <li><a href="faq.html">FAQ</a></li> <!-- Link to FAQ section -->
-        <li><a href="contact.html">Skaffa tillgång</a></li> <!-- Link to contact section -->
-      </ul>
-    </div>
-
-    <!-- Footer Contact Information -->
-    <div class="footer-contact footer-section">
-      <p>Kontakt</p>
-      <ul>
-        <li><a href="tel:01-234 5678 90">01-234 5678 90</a></li>
-        <li><a href="mailto:contact@eze.com">contact@eze.com</a></li> <!-- Mailto link for email -->
-        <li><a href="https://maps.app.goo.gl/Q35vqbAXproWj2hM8"></a>12 Compton St</li>
-      </ul>
-    </div>
-
-    <!-- Social Media Links -->
-    <div class="footer-social footer-section">
-      <p>Följ oss</p>
-      <ul>
-        <li>
-          <a href="https://instagram.com" target="https://www.instagram.com/" class="social-link">
-            <img src="icons/instagram.svg" alt="Instagram" class="social-icon">
+    <!-- Footer -->
+    <footer class="footer">
+      <div class="footer-content">
+        <!-- Footer Logo -->
+        <div class="footer-logo footer-section">
+          <a href="index.html">
+            <img src="icons/logo.svg" alt="Logo" />
           </a>
-        </li>
-        <li>
-          <a href="https://linkedin.com" target="https://www.linkedin.com/" class="social-link">
-            <img src="icons/linkedin.svg" alt="LinkedIn" class="social-icon">
-          </a>
-        </li>
-      </ul>
-    </div>
-  </div>
+        </div>
 
-  <!-- Footer Bottom Text -->
-  <div class="footer-bottom">
-    <p>Copyright © 2024 Adryan, Ludvig & Stilianos</p>
-  </div> 
-</footer>
+        <!-- Footer Navigation Links -->
+        <div class="footer-nav footer-section">
+          <p>Navigation</p>
+          <ul>
+            <li><a href="index.html">Hem</a></li> <!-- Link to home page -->
+            <li><a href="guides.html">Guides</a></li> <!-- Link to guides page -->
+            <li><a href="resurser.html">Verktyg & Resurser</a></li> <!-- Link to resources page -->
+            <li><a href="faq.html">FAQ</a></li> <!-- Link to FAQ section -->
+            <li><a href="contact.html">Skaffa tillgång</a></li> <!-- Link to contact section -->
+          </ul>
+        </div>
 
+        <!-- Footer Contact Information -->
+        <div class="footer-contact footer-section">
+          <p>Kontakt</p>
+          <ul>
+            <li><a href="tel:01-234 5678 90">01-234 5678 90</a></li>
+            <li><a href="mailto:contact@eze.com">contact@eze.com</a></li> <!-- Mailto link for email -->
+            <li><a href="https://maps.app.goo.gl/Q35vqbAXproWj2hM8"></a>12 Compton St</li>
+          </ul>
+        </div>
+
+        <!-- Social Media Links -->
+        <div class="footer-social footer-section">
+          <p>Följ oss</p>
+          <ul>
+            <li>
+              <a href="https://instagram.com" target="https://www.instagram.com/" class="social-link">
+                <img src="icons/instagram.svg" alt="Instagram" class="social-icon">
+              </a>
+            </li>
+            <li>
+              <a href="https://linkedin.com" target="https://www.linkedin.com/" class="social-link">
+                <img src="icons/linkedin.svg" alt="LinkedIn" class="social-icon">
+              </a>
+            </li>
+          </ul>
+        </div>
+      </div>
+      <!-- Footer Bottom Text -->
+      <div class="footer-bottom">
+        <p>Copyright © 2024 Adryan, Ludvig & Stilianos</p>
+      </div> 
+    </footer>
   </body>
 </html>
