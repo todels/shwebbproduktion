@@ -249,7 +249,7 @@ body {
 .contact-form textarea {
   background-color: #f9f9f9;
   border: 1px solid #d0d0d0;
-  border-radius: 200px;
+  border-radius: 32px;
   padding: 10px 15px;
   color: #000;
   font-size: 1rem;
@@ -315,7 +315,7 @@ body {
 }
 
 .contact-form button:hover {
-  background-color: #333;
+  background-color: #7100fc;
 }
 
 /* Responsive Adjustments */
