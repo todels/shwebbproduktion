@@ -12,7 +12,6 @@
   </head>
   <body>
 
-<!-- nav -->
 <nav class="navbar">
   <div class="navbar-container">
     <!-- Logo with link to index.html -->
@@ -24,27 +23,35 @@
 
     <!-- Desktop Navigation Links -->
     <div class="nav-links">
-      <a href="#" class="nav-item">Nybörjarguides</a>
-      <a href="#" class="nav-item">Resurser</a>
-      <a href="#faq" class="nav-item">FAQ</a>
+      <a href="guides.html" class="nav-item">Nybörjarguides</a> <!-- Link to guides.html -->
+      <a href="resources.html" class="nav-item">Resurser</a> <!-- Link to resources.html -->
+      <a href="#faq" class="nav-item">FAQ</a> <!-- Anchor link to FAQ section -->
     </div>
 
-    <!-- Desktop CTA Button -->
-    <button class="nav-cta-button">Få tillgång</button>
+    <!-- Desktop CTA Button linking to Contact Section -->
+    <a href="#contact" class="nav-cta-button">Få tillgång</a> <!-- Link to contact section -->
 
     <!-- Hamburger Button for Mobile -->
     <button class="hamburger" onclick="toggleMenu()">☰</button>
   </div>
 </nav>
 
-
 <!-- Mobile Menu (hidden initially) -->
 <div class="mobile-menu">
-  <a href="#" class="nav-item">Nybörjarguides</a>
-  <a href="#" class="nav-item">Resurser</a>
-  <a href="#faq" class="nav-item">FAQ</a>
-  <button class="nav-cta-button">Få tillgång</button>
+  <a href="guides.html" class="nav-item">Nybörjarguides</a> <!-- Link to guides.html -->
+  <a href="resources.html" class="nav-item">Resurser</a> <!-- Link to resources.html -->
+  <a href="#faq" class="nav-item">FAQ</a> <!-- Anchor link to FAQ section -->
+  <a href="#contact" class="nav-cta-button">Få tillgång</a> <!-- Link to contact section -->
 </div>
+
+<!-- JavaScript to toggle the mobile menu visibility -->
+<script>
+  function toggleMenu() {
+    const mobileMenu = document.querySelector(".mobile-menu");
+    mobileMenu.classList.toggle("active");
+  }
+</script>
+
 
 <!-- FAQ Section -->
 <section class="faq-section" id="faq">

@@ -11,22 +11,24 @@
     <link href="https://fonts.googleapis.com/css2?family=Gochi+Hand&family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap" rel="stylesheet">  
   </head>
   <body>
-    <!-- nav -->
-<nav class="navbar">
+ <nav class="navbar">
   <div class="navbar-container">
+    <!-- Logo with link to index.html -->
     <div class="logo">
-      <img src="icons/logo.svg" alt="Logo" />
+      <a href="index.html">
+        <img src="icons/logo.svg" alt="Logo" />
+      </a>
     </div>
 
     <!-- Desktop Navigation Links -->
     <div class="nav-links">
-      <a href="#" class="nav-item">Nybörjarguides</a>
-      <a href="#" class="nav-item">Resurser</a>
-      <a href="#" class="nav-item">FAQ</a>
+      <a href="guides.html" class="nav-item">Nybörjarguides</a> <!-- Link to guides.html -->
+      <a href="resources.html" class="nav-item">Resurser</a> <!-- Link to resources.html -->
+      <a href="#faq" class="nav-item">FAQ</a> <!-- Anchor link to FAQ section -->
     </div>
 
-    <!-- Desktop CTA Button -->
-    <button class="nav-cta-button">Få tillgång</button>
+    <!-- Desktop CTA Button linking to Contact Section -->
+    <a href="#contact" class="nav-cta-button">Få tillgång</a> <!-- Link to contact section -->
 
     <!-- Hamburger Button for Mobile -->
     <button class="hamburger" onclick="toggleMenu()">☰</button>
@@ -35,10 +37,10 @@
 
 <!-- Mobile Menu (hidden initially) -->
 <div class="mobile-menu">
-  <a href="#" class="nav-item">Nybörjarguides</a>
-  <a href="#" class="nav-item">Resurser</a>
-  <a href="#" class="nav-item">FAQ</a>
-  <button class="nav-cta-button">Få tillgång</button>
+  <a href="guides.html" class="nav-item">Nybörjarguides</a> <!-- Link to guides.html -->
+  <a href="resources.html" class="nav-item">Resurser</a> <!-- Link to resources.html -->
+  <a href="#faq" class="nav-item">FAQ</a> <!-- Anchor link to FAQ section -->
+  <a href="#contact" class="nav-cta-button">Få tillgång</a> <!-- Link to contact section -->
 </div>
 
 <!-- JavaScript to toggle the mobile menu visibility -->

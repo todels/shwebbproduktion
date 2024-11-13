@@ -14,27 +14,47 @@
     />
   </head>
   <body>
-    <!-- Include Navbar -->
-    <nav class="navbar">
-      <div class="navbar-container">
-        <div class="logo">
-          <img src="icons/logo.svg" alt="Logo" />
-        </div>
-        <div class="nav-links">
-          <a href="#" class="nav-item">Nybörjarguides</a>
-          <a href="#" class="nav-item">Resurser</a>
-          <a href="#" class="nav-item">FAQ</a>
-        </div>
-        <button class="nav-cta-button">Få tillgång</button>
-        <button class="hamburger" onclick="toggleMenu()">☰</button>
-      </div>
-    </nav>
-    <div class="mobile-menu">
-      <a href="#" class="nav-item">Nybörjarguides</a>
-      <a href="#" class="nav-item">Resurser</a>
-      <a href="#" class="nav-item">FAQ</a>
-      <button class="nav-cta-button">Få tillgång</button>
+  <nav class="navbar">
+  <div class="navbar-container">
+    <!-- Logo with link to index.html -->
+    <div class="logo">
+      <a href="index.html">
+        <img src="icons/logo.svg" alt="Logo" />
+      </a>
     </div>
+
+    <!-- Desktop Navigation Links -->
+    <div class="nav-links">
+      <a href="guides.html" class="nav-item">Nybörjarguides</a> <!-- Link to guides.html -->
+      <a href="resources.html" class="nav-item">Resurser</a> <!-- Link to resources.html -->
+      <a href="#faq" class="nav-item">FAQ</a> <!-- Anchor link to FAQ section -->
+    </div>
+
+    <!-- Desktop CTA Button linking to Contact Section -->
+    <a href="#contact" class="nav-cta-button">Få tillgång</a> <!-- Link to contact section -->
+
+    <!-- Hamburger Button for Mobile -->
+    <button class="hamburger" onclick="toggleMenu()">☰</button>
+  </div>
+</nav>
+
+<!-- Mobile Menu (hidden initially) -->
+<div class="mobile-menu">
+  <a href="guides.html" class="nav-item">Nybörjarguides</a> <!-- Link to guides.html -->
+  <a href="resources.html" class="nav-item">Resurser</a> <!-- Link to resources.html -->
+  <a href="#faq" class="nav-item">FAQ</a> <!-- Anchor link to FAQ section -->
+  <a href="#contact" class="nav-cta-button">Få tillgång</a> <!-- Link to contact section -->
+</div>
+
+<!-- JavaScript to toggle the mobile menu visibility -->
+<script>
+  function toggleMenu() {
+    const mobileMenu = document.querySelector(".mobile-menu");
+    mobileMenu.classList.toggle("active");
+  }
+</script>
+
+
     <section class="title-section">
       <h1>Få tidig tillgång till Easy E</h1>
       <p>Fyll i formuläret för att få tidig tillgång till beta-bersionen av Easy E! Bli en av de första att prova våra nya funktioner och hjälp oss att göra tjänsten ännu bättre.</p>
