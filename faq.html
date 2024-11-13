@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="sv">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Easy E</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="icon" type="image/x-icon" href="icons/favicon.png">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>    
+    <link href="https://fonts.googleapis.com/css2?family=Gochi+Hand&family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap" rel="stylesheet">  
+  </head>
+  <body>
+
+<!-- nav -->
+<nav class="navbar">
+  <div class="navbar-container">
+    <div class="logo">
+      <img src="icons/logo.svg" alt="Logo" />
+    </div>
+
+    <!-- Desktop Navigation Links -->
+    <div class="nav-links">
+      <a href="#" class="nav-item">Nybörjarguides</a>
+      <a href="#" class="nav-item">Resurser</a>
+      <a href="#" class="nav-item">FAQ</a>
+    </div>
+
+    <!-- Desktop CTA Button -->
+    <button class="nav-cta-button">Få tillgång</button>
+
+    <!-- Hamburger Button for Mobile -->
+    <button class="hamburger" onclick="toggleMenu()">☰</button>
+  </div>
+</nav>
+
+<!-- Mobile Menu (hidden initially) -->
+<div class="mobile-menu">
+  <a href="#" class="nav-item">Nybörjarguides</a>
+  <a href="#" class="nav-item">Resurser</a>
+  <a href="#" class="nav-item">FAQ</a>
+  <button class="nav-cta-button">Få tillgång</button>
+</div>
+
+<!-- JavaScript to toggle the mobile menu visibility -->
+<script>
+  function toggleMenu() {
+    const mobileMenu = document.querySelector(".mobile-menu");
+    mobileMenu.classList.toggle("active");
+  }
+</script>
+
