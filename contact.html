@@ -36,50 +36,56 @@
       <button class="nav-cta-button">Få tillgång</button>
     </div>
 
-    <!-- Contact Section -->
-    <section class="contact-section">
-      <div class="contact-form">
-        <h1>Let's get in touch!</h1>
-        <form action="confirmation.html" method="post">
-          <label for="name">Name*</label>
-          <input
-            type="text"
-            id="name"
-            name="name"
-            placeholder="Adryan Yousef"
-            required
-          />
+   <section class="contact-section">
+  <div class="contact-form">
+    <h1>Fyll i formulär</h1> <!-- Form Title -->
 
-          <label for="email">Email*</label>
-          <input
-            type="email"
-            id="email"
-            name="email"
-            placeholder="Enter your email"
-            required
-          />
+    <!-- Form Structure -->
+    <form action="confirmation.html" method="post">
 
-          <label for="options">Options:</label>
-          <select id="options" name="options" required>
-            <option value="" disabled selected>Choose an option</option>
-            <option value="design">Design</option>
-            <option value="collaboration">Collaboration</option>
-            <option value="innovation">Innovation</option>
-            <option value="feedback">Feedback</option>
-          </select>
-
-          <label for="message">Message*</label>
-          <textarea
-            id="message"
-            name="message"
-            placeholder="Write here..."
-            required
-          ></textarea>
-
-          <button type="submit">Submit</button>
-        </form>
+      <!-- First Row of Input Fields (Förnamn and Efternamn) -->
+      <div class="form-group">
+        <div class="form-field">
+          <label for="first-name">Förnamn*</label> <!-- Label for First Name -->
+          <input type="text" id="first-name" name="first-name" placeholder="Eric" required />
+        </div>
+        <div class="form-field">
+          <label for="last-name">Efternamn*</label> <!-- Label for Last Name -->
+          <input type="text" id="last-name" name="last-name" placeholder="Wright" required />
+        </div>
       </div>
-    </section>
+
+      <!-- Second Row of Input Fields (Email and Telefon) -->
+      <div class="form-group">
+        <div class="form-field">
+          <label for="email">Email*</label> <!-- Label for Email -->
+          <input type="email" id="email" name="email" placeholder="easy@eze.com" required />
+        </div>
+        <div class="form-field">
+          <label for="phone">Telefon*</label> <!-- Label for Phone -->
+          <input type="tel" id="phone" name="phone" placeholder="Wright" required />
+        </div>
+      </div>
+
+      <!-- Radio Button Options for Reason Selection -->
+      <label for="reason">Välj anledningen till varför du vill ha beta åtkomst:</label>
+      <div class="radio-options">
+        <!-- Each radio button has a label styled as a button -->
+        <label><input type="radio" name="reason" value="jobb" required /> Jobb</label>
+        <label><input type="radio" name="reason" value="skola" /> Skola</label>
+        <label><input type="radio" name="reason" value="freelance" /> Freelance</label>
+        <label><input type="radio" name="reason" value="ovrigt" /> Övrigt</label>
+      </div>
+
+      <!-- Textarea for the Message -->
+      <label for="message">Meddelande</label>
+      <textarea id="message" name="message" placeholder="Skriv här..." required></textarea>
+
+      <!-- Submit Button -->
+      <button type="submit">Skicka ansökan</button>
+    </form>
+  </div>
+</section>
 
 
     <!-- Footer -->
