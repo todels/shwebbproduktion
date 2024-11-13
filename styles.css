@@ -1,560 +1,672 @@
-body {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  background-color: #fcfbf9;
-  color: rgba(0, 0, 0, 0.7);
-  text-align: center;
-  font-family: "Inter";
-  font-size: 18px;
-  font-style: normal;
-  font-weight: 500;
-  line-height: 28px;
-  letter-spacing: -0.5px;
-  align-self: stretch;
-}
+/* Ställer in grundlayouten för body. Flex gör att innehållet kan arrangeras i kolumner.
+   Allt centrerat och färgerna hålls milda för att inte störa användarens ögon. 
+   Texten får en snygg, modern font som är lätt att läsa. */
 
-h1 {
-  font-family: "Inter";
-  font-size: 80px;
-  font-style: normal;
-  font-weight: 500;
-  line-height: 87px;
-  letter-spacing: -3px;
-  margin: 0;
-  color: #000;
-}
-
-h2 {
-  font-family: "Inter";
-  font-size: 64px;
-  font-style: normal;
-  font-weight: 600;
-  line-height: 80px;
-  letter-spacing: -2px;
-  color: black;
-}
-
-/* Navbar Styling */
-.navbar {
-  width: 100%;
-  background-color: #fcfbf9;
-  position: fixed;
-  top: 0;
-  left: 0;
-  z-index: 1000;
-  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
-  display: flex;
-  justify-content: center;
-  padding: 24px 16px; /* Ensures padding for better alignment */
-}
-
-.navbar-container {
-  width: 100%;
-  max-width: 1200px;
-  padding: 0 20px;
-  display: flex;
-  align-items: center;
-  justify-content: center; /* Centers the navigation links */
-  gap: 40px;
-  position: relative;
-}
-
-/* Logo aligned to the left */
-.logo {
-  position: absolute;
-  left: 20px;
-  flex-shrink: 0;
-}
-
-/* Desktop Navigation Links */
-.nav-links {
-  display: flex;
-  gap: 40px;
-}
-
-.nav-item {
-  color: #000;
-  font-size: 18px;
-  font-weight: 500;
-  text-decoration: none;
-  position: relative;
-  transition: color 0.3s;
-}
-/* Smooth underline animation */
-.nav-item::after {
-  content: "";
-  position: absolute;
-  width: 0;
-  height: 2px;
-  background-color: #7100fc;
-  bottom: -4px;
-  left: 0;
-  transition: width 0.3s ease;
-}
-
-.nav-item:hover {
-  color: #7100fc;
-  text-decoration: none;
-}
-
-.nav-item:hover::after {
-  width: 100%;
-}
-
-/* CTA Button aligned to the right */
-.nav-cta-button {
-  padding: 12px 20px;
-  background-color: #000;
-  color: #fcfbf9;
-  border-radius: 200px;
-  font-size: 18px;
-  border: none;
-  cursor: pointer;
-  transition: background-color 0.3s;
-  position: absolute;
-  right: 20px;
-  flex-shrink: 0;
-}
-
-.nav-cta-button:hover {
-  background-color: #7100fc;
-}
-
-/* Hamburger Menu Button (Mobile) */
-.hamburger {
-  display: none;
-  font-size: 24px;
-  background: none;
-  border: none;
-  cursor: pointer;
-  color: #000;
-  position: absolute;
-  right: 20px;
-  z-index: 1001;
-}
-
-/* Mobile Menu */
-.mobile-menu {
-  display: none;
-  position: fixed;
-  top: 0;
-  left: 0;
-  width: 100vw;
-  height: 100vh;
-  background-color: #fcfbf9;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  gap: 20px;
-  z-index: 1001;
-}
-
-.mobile-menu.active {
-  display: flex;
-}
-
-.mobile-menu .nav-item {
-  font-size: 20px;
-  color: #000;
-  text-decoration: none;
-}
-
-.mobile-menu .nav-cta-button {
-  padding: 12px 20px;
-  width: 80%;
-  font-size: 16px;
-  border-radius: 20px;
-}
-/* FAQ Section */
-.faq-section {
-  text-align: center;
-  padding: 100px 20px 50px; /* Added top padding to move it down from the navbar */
-}
-
-.faq-section h1 {
-  font-size: 48px;
-  font-weight: 700;
-  color: #000;
-  margin-bottom: 10px;
-}
-
-.faq-subtitle {
-  font-size: 18px;
-  color: rgba(0, 0, 0, 0.6);
-  margin-bottom: 30px;
-}
-
-.faq-items {
-  max-width: 800px;
-  margin: 0 auto;
-}
-
-.faq-item {
-  background-color: #f8f8f8;
-  border-radius: 20px;
-  margin-bottom: 20px;
-  overflow: hidden;
-}
-
-.faq-question {
-  width: 100%;
-  text-align: left;
-  padding: 20px;
-  font-size: 18px;
-  font-weight: 600;
-  color: #000;
-  background: none;
-  border: none;
-  cursor: pointer;
-  outline: none;
-  position: relative;
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-}
-
-.faq-question::after {
-  content: "▼";
-  font-size: 16px;
-  color: #777;
-  transition: transform 0.3s ease;
-}
-
-.faq-item.open .faq-question::after {
-  transform: rotate(180deg);
-  max-width: 600px ;
-}
-
-.faq-answer {
-  display: none;
-  padding: 20px;
-  font-size: 16px;
-  color: rgba(0, 0, 0, 0.7);
-  border-top: 1px solid #eee;
-  text-align: left; /* Left-align the answer text */
-  max-width: 400px ;
-}
-
-.faq-item.open .faq-answer {
-  display: block;
-}
-
-
-/* Responsive Styles */
-@media (max-width: 1100px) {
-  .nav-links,
-  .nav-cta-button {
-    display: none; /* Hide desktop links and CTA button on mobile */
+   body {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background-color: #fcfbf9;
+    color: rgba(0, 0, 0, 0.7);
+    text-align: center;
+    font-family: "Inter";
+    font-size: 18px;
+    font-style: normal;
+    font-weight: 500;
+    line-height: 28px;
+    letter-spacing: -0.5px;
+    align-self: stretch;
   }
-
-  .hamburger {
-    display: block; /* Show hamburger button on mobile */
+  
+  /* Rubrik 1 (h1) får en jättestor font för att verkligen stå ut och fånga uppmärksamheten. 
+     Svart textfärg gör att den syns bra på ljus bakgrund. */
+  
+  h1 {
+    font-family: "Inter";
+    font-size: 80px;
+    font-style: normal;
+    font-weight: 500;
+    line-height: 87px;
+    letter-spacing: -3px;
+    margin: 0;
+    color: #000;
   }
-
-  /* Adjust padding to prevent navbar items from overflowing */
+  
+  /* Rubrik 2 (h2) är mindre än h1 men ändå ganska stor, för att framhäva sektionstitlar eller andra viktiga rubriker. */
+  
+  h2 {
+    font-family: "Inter";
+    font-size: 64px;
+    font-style: normal;
+    font-weight: 600;
+    line-height: 80px;
+    letter-spacing: -2px;
+    color: black;
+  }
+  
+  /* Styling för navigeringsmenyn (navbar). 
+     Menyn är fast placerad högst upp på sidan så att den alltid är synlig. 
+     Box-shadow ger en subtil skugga för att ge djup. */
+  
+  .navbar {
+    width: 100%;
+    background-color: #fcfbf9;
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 1000;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    display: flex;
+    justify-content: center;
+    padding: 24px 16px; /* Ensures padding for better alignment */
+  }
+  
+  /* Navbaren får en container som hjälper att centrera innehållet och justera bredden 
+     beroende på skärmstorleken, med ett maxvärde så den inte blir för bred på stora skärmar. */
+  
   .navbar-container {
-    padding: 0 10px;
-  }
-  .cards {
-    flex-direction: column;
-    align-items: center; /* Ensure the cards are centrally aligned on smaller screens */
-  }
-  .phone-icon,
-  .cable-icon,
-  .computer-icon,
-  .mouse-icon {
-    display: none;
-  }
-}
-.hero {
-  position: relative;
-  margin-top: 240px;
-  margin-bottom: 224px;
-  display: flex;
-  max-width: 664px;
-  flex-direction: column;
-  align-items: center;
-  gap: 24px;
-}
-
-
-
-.phone-icon {
-  position: absolute;
-  top: -28px;
-  right: -100px;
-}
-
-.cable-icon {
-  position: absolute;
-  top: -48px;
-  left: -120px;
-}
-
-.computer-icon {
-  position: absolute;
-  bottom: -20px;
-  left: -120px;
-}
-
-.mouse-icon {
-  position: absolute;
-  bottom: -80px;
-  right: -160px;
-}
-
-/* Form container styling */
-.signup-form {
-  display: flex;
-  align-items: center;
-  padding: 0;
-  gap: 0;
-  width: 434px;
-  height: 44px;
-  background: #FCFBF9;
-  border: 1px solid #000;
-  border-radius: 22px;
-  overflow: hidden;
-}
-
-/* Email input field styling */
-.email-input {
-  border: none;
-  padding: 10px 15px;
-  font-size: 16px;
-  outline: none;
-  flex: 1;
-  background-color: #FCFBF9;
-  color: #333;
-}
-
-/* Submit button styling */
-.submit-button {
-  background-color: #000;
-  color: #fff;
-  padding: 14px 24px;
-  font-size: 16px;
-  border: none;
-  height: 100%;
-  border-radius: 200px;
-  cursor: pointer;
-}
-
-/* Nybörjarguides - Offerings section and card styling */
-.offerings {
-  text-align: center;
-  margin: 50px 0;
-}
-
-.offerings h2 {
-  font-size: 48px;
-  font-weight: 600;
-  color: #000;
-}
-
-.offerings p {
-  font-size: 18px;
-  color: rgba(0, 0, 0, 0.7);
-  margin: 20px auto;
-  max-width: 600px;
-}
-
-.card-image {
-  width: 100%;
-  height: 200px;
-  object-fit: cover;
-  border-bottom: 2px solid #ddd;
-  border-radius: 24px;
-}
-
-.card button {
-  background-color: #000;
-  color: white;
-  border: none;
-  padding: 10px 20px;
-  margin: 20px;
-  border-radius: 30px;
-  cursor: pointer;
-  align-self: center;
-}
-
-.card button:hover {
-  background-color: #444;
-}
-
-/* Call to Action Section */
-.cta-section {
-  background-color: #FCFBF9;
-  text-align: center;
-  padding: 50px 0;
-  position: relative;
-}
-
-.cta-large {
-  background-color: #000;
-  color: white;
-  font-size: 20px;
-  padding: 20px 40px;
-  border-radius: 50px;
-  cursor: pointer;
-  border: none;
-  transition: background-color 0.3s ease;
-  display: inline-block;
-  position: relative;
-}
-
-.cta-large:hover {
-  background-color: #7100FC;
-}
-
-.cta-arrow {
-  position: absolute;
-  right: -50px;
-  bottom: 50px;
-}
- /* Footer Section */
-.footer {
-  background-color: #fcfbf9;
-  padding: 70px 0;
-  color: #000;
-  text-align: center;
-}
-
-.footer-content {
-  display: flex;
-  justify-content: space-between;
-  align-items: flex-start;
-  max-width: 1440px;
-  margin: 0 auto;
-  gap: 176px;
-}
-
-.footer-logo {
-  font-size: 40px;
-  font-weight: bold;
-}
-
-.footer-nav,
-.footer-contact,
-.footer-social {
-  text-align: left;
-  flex: 1;
-  padding: 0 20px;
-}
-
-.footer-nav p,
-.footer-contact p,
-.footer-social p {
-  font-weight: 600;
-  font-size: 18px;
-  margin-bottom: 15px;
-}
-
-.footer-nav ul,
-.footer-contact ul,
-.footer-social ul {
-  list-style-type: none;
-  padding: 0;
-  margin: 0;
-}
-
-/* Social Icon Styling */
-.footer-social ul {
-  display: flex;
-  gap: 16px; /* Adjust spacing between icons */
-  padding: 0;
-  margin: 0;
-  align-items: center;
-}
-
-.footer-social ul li {
-  margin: 0;
-}
-
-.footer-social ul li a {
-  display: block;
-}
-
-.footer-social .social-icon {
-  width: 24px; /* Adjust size as needed */
-  height: 24px;
-}
-
-.footer-social .social-link {
-  transition: opacity 0.3s ease;
-}
-
-.footer-social .social-link:hover {
-  opacity: 0.7; /* Optional hover effect */
-}
-
-/* Remove the blue link color and underlines */
-.footer-nav ul li a,
-.footer-social ul li a {
-  text-decoration: none;
-  color: #000;
-}
-
-.footer-nav ul li a:hover,
-.footer-social ul li a:hover {
-  color: #555;
-}
-
-.footer-bottom {
-  border-top: 1px solid #ddd;
-  padding-top: 20px;
-  margin-top: 40px;
-  font-size: 14px;
-}
-
-/* Mobile Responsive Footer */
-@media (max-width: 768px) {
-  .footer-content {
-    flex-direction: column;
-    align-items: flex-start;
-    gap: 30px;
+    width: 100%;
+    max-width: 1200px;
     padding: 0 20px;
+    display: flex;
+    align-items: center;
+    justify-content: center; /* Centers the navigation links */
+    gap: 40px;
+    position: relative;
   }
+  
+  /* Logotypen placeras till vänster i navbaren, och är alltid synlig även om sidan är mindre. */
+  
+  .logo {
+    position: absolute;
+    left: 20px;
+    flex-shrink: 0;
+  }
+  
+  /* Navigationens länkar är uppradade med lite mellanrum emellan för tydlig läsbarhet. */
+  
+  .nav-links {
+    display: flex;
+    gap: 40px;
+  }
+  
+  /* Stil för individuella navigeringslänkar. De är svarta men får en fin, 
+     subtil underline-effekt vid hover. */
+  
+  .nav-item {
+    color: #000;
+    font-size: 18px;
+    font-weight: 500;
+    text-decoration: none;
+    position: relative;
+    transition: color 0.3s;
+  }
+  
+  /* Effekt vid hover: en linje växer fram under texten, vilket gör navigeringsupplevelsen mer dynamisk och modern. */
+  
+  .nav-item::after {
+    content: "";
+    position: absolute;
+    width: 0;
+    height: 2px;
+    background-color: #7100fc;
+    bottom: -4px;
+    left: 0;
+    transition: width 0.3s ease;
+  }
+  
+  .nav-item:hover {
+    color: #7100fc;
+    text-decoration: none;
+  }
+  
+  .nav-item:hover::after {
+    width: 100%;
+  }
+  
 
+/* CTA-knapp i navigeringen. Knappen är placerad till höger och har en snygg, rundad form.
+   Bakgrunden är svart för att sticka ut, och färgen ändras vid hover för en dynamisk effekt. */
+
+   .nav-cta-button {
+    padding: 12px 20px;
+    background-color: #000;
+    color: #fcfbf9;
+    border-radius: 200px;
+    font-size: 18px;
+    border: none;
+    cursor: pointer;
+    transition: background-color 0.3s;
+    position: absolute;
+    right: 20px;
+    flex-shrink: 0;
+  }
+  
+  .nav-cta-button:hover {
+    background-color: #7100fc;
+  }
+  
+  /* Hamburgermenyn visas bara på mobila enheter. Den är placerad till höger, 
+     och knappen har en enkel ikonliknande design. */
+  
+  .hamburger {
+    display: none;
+    font-size: 24px;
+    background: none;
+    border: none;
+    cursor: pointer;
+    color: #000;
+    position: absolute;
+    right: 20px;
+    z-index: 1001;
+  }
+  
+  /* Menyn för mobila enheter. Tar hela skärmen, centrerar länkarna, och visas bara när aktiv. */
+  
+  .mobile-menu {
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    background-color: #fcfbf9;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 20px;
+    z-index: 1001;
+  }
+  
+  .mobile-menu.active {
+    display: flex;
+  }
+  
+  /* Stil för navigationslänkar och CTA-knapp i mobilmenyn.
+     Länkarna är större för att passa mobilformat och knappen anpassas i storlek. */
+  
+  .mobile-menu .nav-item {
+    font-size: 20px;
+    color: #000;
+    text-decoration: none;
+  }
+  
+  .mobile-menu .nav-cta-button {
+    padding: 12px 20px;
+    width: 80%;
+    font-size: 16px;
+    border-radius: 20px;
+  }
+  
+  /* FAQ-sektionen, som har centrering och padding för att separera den från navigeringen ovanför. */
+  
+  .faq-section {
+    text-align: center;
+    padding: 100px 20px 50px;
+  }
+  
+  .faq-section h1 {
+    font-size: 48px;
+    font-weight: 700;
+    color: #000;
+    margin-bottom: 10px;
+  }
+  
+  /* Undertext till FAQ-sektionen, med mindre text och en lite mjukare färgton. */
+  
+  .faq-subtitle {
+    font-size: 18px;
+    color: rgba(0, 0, 0, 0.6);
+    margin-bottom: 30px;
+  }
+  
+  /* FAQ-lista centrerad med maxbredd för att hålla det läsvänligt. */
+  
+  .faq-items {
+    max-width: 800px;
+    margin: 0 auto;
+  }
+  
+  /* Enskilda FAQ-poster med en ljus bakgrund och rundade hörn för en mjukare look. */
+  
+  .faq-item {
+    background-color: #f8f8f8;
+    border-radius: 20px;
+    margin-bottom: 20px;
+    overflow: hidden;
+  }
+  
+  /* Fråge-rubriken för varje FAQ-punkt. Den har en enkel layout där texten och en pil är justerade. */
+  
+  .faq-question {
+    width: 100%;
+    text-align: left;
+    padding: 20px;
+    font-size: 18px;
+    font-weight: 600;
+    color: #000;
+    background: none;
+    border: none;
+    cursor: pointer;
+    outline: none;
+    position: relative;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+  
+  /* Pil-ikonen som visar sig i FAQ-rubriken. Roterar när sektionen är öppen. */
+  
+  .faq-question::after {
+    content: "▼";
+    font-size: 16px;
+    color: #777;
+    transition: transform 0.3s ease;
+  }
+  
+  .faq-item.open .faq-question::after {
+    transform: rotate(180deg);
+    max-width: 600px;
+  }
+  
+  /* Svarstexten i FAQ-sektionen, som endast visas när frågan är öppen.
+     Svarstexten är något mindre och vänsterjusterad. */
+  
+  .faq-answer {
+    display: none;
+    padding: 20px;
+    font-size: 16px;
+    color: rgba(0, 0, 0, 0.7);
+    border-top: 1px solid #eee;
+    text-align: left;
+    max-width: 400px;
+  }
+  
+  .faq-item.open .faq-answer {
+    display: block;
+  }
+  
+
+
+/* Responsiva stilar för mindre skärmar.
+   När skärmen är smalare än 1100px, döljs vissa element och andra visas för att anpassa layouten. */
+
+   @media (max-width: 1100px) {
+    .nav-links,
+    .nav-cta-button {
+      display: none; /* Döljer navigationslänkarna och CTA-knappen på mobila enheter */
+    }
+  
+    .hamburger {
+      display: block; /* Visar hamburgermenyn på mobila enheter */
+    }
+  
+    /* Justerar padding i navbaren så att innehållet inte överlappar på mindre skärmar */
+    .navbar-container {
+      padding: 0 10px;
+    }
+  
+    /* Ställer om korten så att de staplas vertikalt och centrerar dem */
+    .cards {
+      flex-direction: column;
+      align-items: center;
+    }
+  
+    /* Döljer ikonerna för telefon, kabel, dator och mus på mindre skärmar */
+    .phone-icon,
+    .cable-icon,
+    .computer-icon,
+    .mouse-icon {
+      display: none;
+    }
+  }
+  
+  /* Hero-sektionen som innehåller huvudbudskapet.
+     Den är centrerad och har marginaler för att ge utrymme ovanför och nedanför. */
+  
+  .hero {
+    position: relative;
+    margin-top: 240px;
+    margin-bottom: 224px;
+    display: flex;
+    max-width: 664px;
+    flex-direction: column;
+    align-items: center;
+    gap: 24px;
+  }
+  
+  /* Positionerar olika ikoner runt hero-sektionen för en dekorativ touch. */
+  
+  .phone-icon {
+    position: absolute;
+    top: -28px;
+    right: -100px;
+  }
+  
+  .cable-icon {
+    position: absolute;
+    top: -48px;
+    left: -120px;
+  }
+  
+  .computer-icon {
+    position: absolute;
+    bottom: -20px;
+    left: -120px;
+  }
+  
+  .mouse-icon {
+    position: absolute;
+    bottom: -80px;
+    right: -160px;
+  }
+  
+  /* Styling för anmälningsformuläret.
+     Formuläret är flexibelt och innehåller ett e-postfält och en submit-knapp bredvid varandra.
+     Har rundade hörn och en enkel ram. */
+  
+  .signup-form {
+    display: flex;
+    align-items: center;
+    padding: 0;
+    gap: 0;
+    width: 434px;
+    height: 44px;
+    background: #FCFBF9;
+    border: 1px solid #000;
+    border-radius: 22px;
+    overflow: hidden;
+  }
+  
+  /* Stil för e-postfältet i formuläret.
+     Ingen kantlinje och tar upp så mycket utrymme som möjligt inom formuläret. */
+  
+  .email-input {
+    border: none;
+    padding: 10px 15px;
+    font-size: 16px;
+    outline: none;
+    flex: 1;
+    background-color: #FCFBF9;
+    color: #333;
+  }
+  
+  /* Stil för submit-knappen i formuläret.
+     Svart bakgrund med vit text och rundade kanter för en modern look. */
+  
+  .submit-button {
+    background-color: #000;
+    color: #fff;
+    padding: 14px 24px;
+    font-size: 16px;
+    border: none;
+    height: 100%;
+    border-radius: 200px;
+    cursor: pointer;
+  }
+  
+  /* Sektionen för "Nybörjarguides" eller erbjudanden.
+     Texten är centrerad och sektionen har marginaler för att separera den från andra delar av sidan. */
+  
+  .offerings {
+    text-align: center;
+    margin: 50px 0;
+  }
+  
+  .offerings h2 {
+    font-size: 48px;
+    font-weight: 600;
+    color: #000;
+  }
+  
+  .offerings p {
+    font-size: 18px;
+    color: rgba(0, 0, 0, 0.7);
+    margin: 20px auto;
+    max-width: 600px;
+  }
+  
+  /* Stil för bilderna i korten.
+     Bilderna fyller hela kortets bredd och har rundade hörn för en mjukare känsla. */
+  
+  .card-image {
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
+    border-bottom: 2px solid #ddd;
+    border-radius: 24px;
+  }
+  
+  /* Stil för knapparna i korten.
+     Svarta knappar med vit text och rundade kanter som ändrar färg vid hover för interaktivitet. */
+  
+  .card button {
+    background-color: #000;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    margin: 20px;
+    border-radius: 30px;
+    cursor: pointer;
+    align-self: center;
+  }
+  
+  .card button:hover {
+    background-color: #444;
+  }
+  
+
+/* Call-to-Action (CTA) Sektion. Denna sektion har en ljus bakgrundsfärg och är centrerad.
+   Den har padding för att skapa utrymme runt texten. */
+
+   .cta-section {
+    background-color: #FCFBF9;
+    text-align: center;
+    padding: 50px 0;
+    position: relative;
+  }
+  
+  /* Stor CTA-knapp med svart bakgrund och vit text.
+     Rundad form och hover-effekt som ändrar bakgrundsfärg för interaktivitet. */
+  
+  .cta-large {
+    background-color: #000;
+    color: white;
+    font-size: 20px;
+    padding: 20px 40px;
+    border-radius: 50px;
+    cursor: pointer;
+    border: none;
+    transition: background-color 0.3s ease;
+    display: inline-block;
+    position: relative;
+  }
+  
+  .cta-large:hover {
+    background-color: #7100FC;
+  }
+  
+  /* Pilikon i CTA-sektionen, placerad längst ner till höger om knappen. */
+  
+  .cta-arrow {
+    position: absolute;
+    right: -50px;
+    bottom: 50px;
+  }
+  
+  /* Footer-sektionen har en ljus bakgrund och centrerad text.
+     Padding skapar utrymme runt hela sektionen för en renare design. */
+  
+  .footer {
+    background-color: #fcfbf9;
+    padding: 70px 0;
+    color: #000;
+    text-align: center;
+  }
+  
+  /* Innehåll i footern organiseras med flexbox för att dela upp sektionerna och ge dem jämn spridning. */
+  
+  .footer-content {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    max-width: 1440px;
+    margin: 0 auto;
+    gap: 176px;
+  }
+  
+  /* Footer-logotypen har stor och fet text för att stå ut. */
+  
+  .footer-logo {
+    font-size: 40px;
+    font-weight: bold;
+  }
+  
+  /* Footer-sektioner för navigation, kontakt och sociala medier, som alla är vänsterjusterade.
+     Ger varje sektion lite padding för bättre layout. */
+  
   .footer-nav,
   .footer-contact,
   .footer-social {
-    width: 100%;
-    padding: 0;
-  }
-
-  .footer-bottom {
-    text-align: center;
-    padding: 20px 0;
-    font-size: 14px;
-  }
-
-  /* Center social icons on mobile */
-  .footer-social ul {
-    justify-content: flex-start;
-  }
-
-  .cta-arrow {
-    display: none;
+    text-align: left;
+    flex: 1;
+    padding: 0 20px;
   }
   
-  .contact-section {
-    width: 100%;
-    padding: 20px;
+  /* Texten i varje footer-sektion har fet stil och större fontstorlek för rubriker. */
+  
+  .footer-nav p,
+  .footer-contact p,
+  .footer-social p {
+    font-weight: 600;
+    font-size: 18px;
+    margin-bottom: 15px;
   }
-
-  .form-group {
-    flex-direction: column;
-    gap: 15px;
+  
+  /* Listor i footern för navigering, kontakt och sociala ikoner utan punkter och med jämn layout. */
+  
+  .footer-nav ul,
+  .footer-contact ul,
+  .footer-social ul {
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
   }
-}
+  
+  /* Sociala ikonerna placeras med flexbox och har en jämn lucka mellan sig för att skapa utrymme. */
+  
+  .footer-social ul {
+    display: flex;
+    gap: 16px;
+    padding: 0;
+    margin: 0;
+    align-items: center;
+  }
+  
+  .footer-social ul li {
+    margin: 0;
+  }
+  
+  /* Sociala länkar visas som block och har en transition-effekt för att ändra opacitet vid hover. */
+  
+  .footer-social ul li a {
+    display: block;
+  }
+  
+  .footer-social .social-icon {
+    width: 24px;
+    height: 24px;
+  }
+  
+  .footer-social .social-link {
+    transition: opacity 0.3s ease;
+  }
+  
+  .footer-social .social-link:hover {
+    opacity: 0.7;
+  }
+  
+  /* Tar bort länkfärg och understrykning för länkar i footern och ändrar färg vid hover. */
+  
+  .footer-nav ul li a,
+  .footer-social ul li a {
+    text-decoration: none;
+    color: #000;
+  }
+  
+  .footer-nav ul li a:hover,
+  .footer-social ul li a:hover {
+    color: #555;
+  }
+  
+  /* Avslutande sektion av footern med en tunn linje upptill för att skilja från huvudsektionen. */
+  
+  .footer-bottom {
+    border-top: 1px solid #ddd;
+    padding-top: 20px;
+    margin-top: 40px;
+    font-size: 14px;
+  }
+  
+  /* Responsiva stilar för footern på mobila enheter. 
+     Sektionerna staplas vertikalt för att få plats på mindre skärmar. */
+  
+  @media (max-width: 768px) {
+    .footer-content {
+      flex-direction: column;
+      align-items: flex-start;
+      gap: 30px;
+      padding: 0 20px;
+    }
+  
+    .footer-nav,
+    .footer-contact,
+    .footer-social {
+      width: 100%;
+      padding: 0;
+    }
+  
+    .footer-bottom {
+      text-align: center;
+      padding: 20px 0;
+      font-size: 14px;
+    }
+  
+    /* Sociala ikonerna centreras på mobila enheter för en balanserad layout. */
+  
+    .footer-social ul {
+      justify-content: flex-start;
+    }
+  
+    /* Dölj pilen i CTA-sektionen på mindre skärmar för en renare design. */
+  
+    .cta-arrow {
+      display: none;
+    }
+    
+    /* Kontaktsektionen sträcker sig över hela bredden på mobila enheter för att fylla skärmen bättre. */
+  
+    .contact-section {
+      width: 100%;
+      padding: 20px;
+    }
+  
+    /* Formulärgruppen på mobila enheter med vertikal layout och lucka för bättre användarvänlighet. */
+  
+    .form-group {
+      flex-direction: column;
+      gap: 15px;
+    }
+  }
+  
+/* Sektion för Guidekort. Innehållet centreras och får marginal för att skapa utrymme runt hela sektionen. */
 
-/* New page - Guide Cards Section */
 .guide-cards {
   text-align: center;
   margin: 50px 0;
 }
+
+/* Rubriksektion för guidekort med flexlayout som centrerar rubrikens element vertikalt. */
 
 .guide-header {
   display: flex;
@@ -563,11 +675,15 @@ h2 {
   margin-bottom: 30px;
 }
 
+/* Rubrikbild (handwritten-heading) med specifik bredd och utrymme nedanför för att separera från övrig text. */
+
 .handwritten-heading {
   width: 250px;
   height: auto;
   margin-bottom: 20px;
 }
+
+/* Stilar för rubriken i guidekort-sektionen, med stor fontstorlek och fet stil för att framhäva texten. */
 
 .guide-cards h2 {
   font-size: 64px;
@@ -576,12 +692,17 @@ h2 {
   margin: 10px 0;
 }
 
+/* Paragraftext i guidekort-sektionen med en läsvänlig maxbredd och ljusare textfärg. */
+
 .guide-cards p {
   font-size: 18px;
   color: rgba(0, 0, 0, 0.7);
   margin: 0 auto;
   max-width: 600px;
 }
+
+/* Kortsektion med flexlayout för att placera kort bredvid varandra.
+   Kort radbryts vid behov och har utrymme mellan dem. */
 
 .cards {
   display: flex;
@@ -590,6 +711,9 @@ h2 {
   flex-wrap: wrap;
   margin-top: 40px;
 }
+
+/* Individuella kort (card) med vertikal layout och centrerat innehåll.
+   Korten har padding för att skapa utrymme inuti dem. */
 
 .card {
   width: 280px;
@@ -600,6 +724,9 @@ h2 {
   justify-content: space-between;
   text-align: center;
 }
+
+/* Ikon-stil inom korten, med rundad bakgrund och padding för att centrera ikonen.
+   Varje ikon placeras ovanför korttexten. */
 
 .card-icon {
   background-color: #fcfcfc;
@@ -618,6 +745,8 @@ h2 {
   height: 50px;
 }
 
+/* Rubrik för korten med stor och fet stil för att fånga användarens uppmärksamhet. */
+
 .card h3 {
   font-size: 24px;
   font-weight: 600;
@@ -625,11 +754,15 @@ h2 {
   margin: 10px 0;
 }
 
+/* Korttext med en mindre font och nedtonad färg för en mjukare känsla. */
+
 .card p {
   font-size: 16px;
   color: rgba(0, 0, 0, 0.7);
   margin-bottom: 20px;
 }
+
+/* Knapp inom korten som är rundad, svart och ändrar färg vid hover för interaktivitet. */
 
 .card button {
   background-color: #000;
@@ -646,23 +779,31 @@ h2 {
   background-color: #444;
 }
 
+/* Sektion som lyfter fram vad användaren får (what-you-get), centrerad med margin ovanför och nedanför. */
+
 .what-you-get {
   text-align: center;
   margin: 60px 0;
 }
-/* Contact Section Layout */
+
+/* Kontaktsektion med centrerad layout och flexibel bredd för olika skärmstorlekar.
+   Bakgrunden är ljus för att matcha resten av sidan. */
+
 .contact-section {
   display: flex;
   justify-content: center;
   align-items: center;
-  padding: 20px; /* Add padding for better mobile spacing */
+  padding: 20px;
   margin: 0 auto;
-  width: 100%; /* Set to 100% width for smaller screens */
-  max-width: 600px; /* Limit maximum width on larger screens */
-  gap: 40px; /* Vertical gap between sections */
+  width: 100%;
+  max-width: 600px;
+  gap: 40px;
   flex-direction: column;
   background-color: #fcfbf9;
 }
+
+/* Layout för kontaktformuläret med vertikal layout och centrerad text.
+   Full bredd på mindre skärmar för att anpassa sig till mobilanvändning. */
 
 .contact-form {
   display: flex;
@@ -670,11 +811,12 @@ h2 {
   align-items: center;
   padding: 0;
   gap: 20px;
-  width: 100%; /* Full width of the container */
+  width: 100%;
   max-width: 600px;
 }
 
-/* Form Title Styling */
+/* Titel i kontaktformuläret med centrerad text och större storlek för att framhäva rubriken. */
+
 .contact-form h1 {
   font-size: 24px;
   font-weight: 600;
@@ -683,7 +825,9 @@ h2 {
   color: #000;
 }
 
-/* Input Fields Row with Gap */
+/* Rad för inputfält med utrymme mellan fält för bättre layout.
+   Justerar bredden för att passa helheten. */
+
 .form-group {
   display: flex;
   gap: 20px;
@@ -698,7 +842,8 @@ h2 {
   width: 100%;
 }
 
-/* Label Styling (Left-Aligned) */
+/* Stil för etiketter inom kontaktformuläret med vänsterjustering och mindre storlek. */
+
 .contact-form label {
   font-size: 0.9rem;
   color: #000;
@@ -707,7 +852,9 @@ h2 {
   text-align: left;
 }
 
-/* Input and Textarea Styling */
+/* Stilar för inputfält och textfält med rundade kanter och ljus bakgrund.
+   Placering och storlek för text i dessa fält är jämn och lättläst. */
+
 .contact-form input,
 .contact-form textarea {
   background-color: #f9f9f9;
@@ -726,7 +873,9 @@ h2 {
   color: #b0b0b0;
 }
 
-/* Styling for Radio Button Options */
+/* Alternativ för radioknappar med bakgrund och ljus färg.
+   Stil förändras vid val för att indikera aktivt val. */
+
 .radio-options {
   display: flex;
   gap: 10px;
@@ -754,14 +903,18 @@ h2 {
   color: #fff;
 }
 
-/* Textarea Styling */
+/* Textfält i formuläret, med möjlighet att ändra höjd.
+   Skugga för att ge djup och göra det mer synligt. */
+
 .contact-form textarea {
   resize: vertical;
   min-height: 100px;
   box-shadow: 0px 1px 2px rgba(0, 0, 0, 0.1);
 }
 
-/* Submit Button Styling */
+/* Skicka-knapp i kontaktformuläret som ändrar bakgrundsfärg vid hover.
+   Justerad för att se snygg och klickbar ut. */
+
 .contact-form button {
   background-color: #000;
   color: #fff;
@@ -781,32 +934,33 @@ h2 {
   background-color: #7100fc;
 }
 
-/* Responsive Styles */
+/* Responsiva stilar för kontaktsektionen och formulär på mobila enheter. */
+
 @media (max-width: 768px) {
   .contact-section {
-    padding: 20px; /* Add padding for mobile */
+    padding: 20px;
   }
 
   .form-group {
-    flex-direction: column; /* Stack input fields on smaller screens */
-    gap: 10px; /* Reduce gap for smaller screens */
+    flex-direction: column;
+    gap: 10px;
   }
 
   .contact-form h1 {
-    font-size: 20px; /* Smaller title size for mobile */
+    font-size: 20px;
   }
 }
 
 @media (max-width: 480px) {
   .contact-section {
-    padding: 10px; /* Reduce padding on very small screens */
+    padding: 10px;
   }
 
   .contact-form h1 {
-    font-size: 18px; /* Further reduce title size for very small screens */
+    font-size: 18px;
   }
 
   .contact-form button {
-    width: 100%; /* Make the submit button full-width on small screens */
+    width: 100%;
   }
 }

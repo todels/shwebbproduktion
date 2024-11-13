@@ -1,6 +1,7 @@
 <!DOCTYPE html>
 <html lang="sv">
   <head>
+    <!-- Grundläggande metadata och länk till CSS-stilar, favicon, och Google Fonts för typsnitt -->
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Easy E Resurser</title>
@@ -11,39 +12,40 @@
     <link href="https://fonts.googleapis.com/css2?family=Gochi+Hand&family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap" rel="stylesheet">  
   </head>
   <body>
+    <!-- Navigeringsmeny högst upp -->
     <nav class="navbar">
       <div class="navbar-container">
-        <!-- Logo with link to index.html -->
+        <!-- Logo med länk till startsidan -->
         <div class="logo">
           <a href="index.html">
             <img src="icons/logo.svg" alt="Logo" />
           </a>
         </div>
 
-        <!-- Desktop Navigation Links -->
+        <!-- Länkar för desktop-navigering -->
         <div class="nav-links">
-          <a href="guides.html" class="nav-item">Nybörjarguides</a> <!-- Link to guides.html -->
-          <a href="resurser.html" class="nav-item">Resurser</a> <!-- Link to resources.html -->
-          <a href="faq.html" class="nav-item">FAQ</a> <!-- Anchor link to FAQ section -->
+          <a href="guides.html" class="nav-item">Nybörjarguides</a>
+          <a href="resurser.html" class="nav-item">Resurser</a>
+          <a href="faq.html" class="nav-item">FAQ</a>
         </div>
 
-        <!-- Desktop CTA Button linking to Contact Section -->
-        <a href="contact.html" class="nav-cta-button">Få tillgång</a> <!-- Link to contact section -->
+        <!-- CTA-knapp som länkar till kontaktsidan -->
+        <a href="contact.html" class="nav-cta-button">Få tillgång</a>
 
-        <!-- Hamburger Button for Mobile -->
+        <!-- Hamburgermenyn för mobilanvändare -->
         <button class="hamburger" onclick="toggleMenu()">☰</button>
       </div>
     </nav>
 
-    <!-- Mobile Menu (hidden initially) -->
+    <!-- Mobilmeny som är dold initialt och visas vid klick på hamburgermenyn -->
     <div class="mobile-menu">
-      <a href="guides.html" class="nav-item">Nybörjarguides</a> <!-- Link to guides.html -->
-      <a href="resurser.html" class="nav-item">Resurser</a> <!-- Link to resources.html -->
-      <a href="faq.html" class="nav-item">FAQ</a> <!-- Anchor link to FAQ section -->
-      <a href="contact.html" class="nav-cta-button">Få tillgång</a> <!-- Link to contact section -->
+      <a href="guides.html" class="nav-item">Nybörjarguides</a>
+      <a href="resurser.html" class="nav-item">Resurser</a>
+      <a href="faq.html" class="nav-item">FAQ</a>
+      <a href="contact.html" class="nav-cta-button">Få tillgång</a>
     </div>
 
-    <!-- JavaScript to toggle the mobile menu visibility -->
+    <!-- JavaScript-funktion för att växla synlighet för mobilmenyn -->
     <script>
       function toggleMenu() {
         const mobileMenu = document.querySelector(".mobile-menu");
@@ -51,14 +53,14 @@
       }
     </script>
 
-    <!-- Hero Section -->
+    <!-- Hero-sektion för sidans huvudrubrik och introduktionstext -->
     <div class="hero">
       <img src="icons/tools.svg" alt="Verktyg & Resurser" class="hero-title">
       <h2>Verktyg & Resurser</h2>
       <p>Utforska vår samling av verktyg och resurser som gör din teknikvardag enklare och mer produktiv.</p>
     </div>
 
-    <!-- What You Get Section -->
+    <!-- Sektion som visar vad användaren får tillgång till med tjänsten -->
     <section class="what-you-get">
       <h2>Vad du får tillgång till med Easy E</h2>
       <div class="cards">
@@ -81,57 +83,56 @@
       </div>
     </section>
 
-    <!-- Call to Action Section -->
+    <!-- Sektion för Call to Action med en stor knapp som uppmuntrar användaren att lära sig mer -->
     <section class="cta-section">
       <h2>Redo att lära dig?</h2>
       <button class="cta-large" onclick="window.location.href='contact.html'">Läs mer →</button>
-        <img src="icons/arrow.svg" class="cta-arrow"></img> <!-- Arrow element outside the button -->
+      <img src="icons/arrow.svg" class="cta-arrow" alt="Pil"> <!-- Dekorativ pil utanför knappen -->
     </section>
 
-    <!-- Footer -->
+    <!-- Sidfot med navigationslänkar, kontaktinformation och länkar till sociala medier -->
     <footer class="footer">
       <div class="footer-content">
-        <!-- Footer Logo -->
+        <!-- Logotyp i sidfoten med länk till startsidan -->
         <div class="footer-logo footer-section">
           <a href="index.html">
             <img src="icons/logo.svg" alt="Logo" />
           </a>
         </div>
 
-        <!-- Footer Navigation Links -->
+        <!-- Navigationslänkar i sidfoten -->
         <div class="footer-nav footer-section">
           <p>Navigation</p>
           <ul>
-            <li><a href="index.html">Hem</a></li> <!-- Link to home page -->
-            <li><a href="guides.html">Guides</a></li> <!-- Link to guides page -->
-            <li><a href="resurser.html">Verktyg & Resurser</a></li> <!-- Link to resources page -->
-            <li><a href="faq.html">FAQ</a></li> <!-- Link to FAQ section -->
-            <li><a href="contact.html">Skaffa tillgång</a></li> <!-- Link to contact section -->
+            <li><a href="index.html">Hem</a></li>
+            <li><a href="guides.html">Guides</a></li>
+            <li><a href="resurser.html">Verktyg & Resurser</a></li>
+            <li><a href="faq.html">FAQ</a></li>
+            <li><a href="contact.html">Skaffa tillgång</a></li>
           </ul>
         </div>
 
-     
-        <!-- Footer Contact Information -->
+        <!-- Kontaktinformation i sidfoten -->
         <div class="footer-nav footer-section">
           <p>Kontakt</p>
           <ul>
             <li><a href="tel:01-234 5678 90">01-234 5678 90</a></li>
-            <li><a href="mailto:contact@eze.com">contact@eze.com</a></li> <!-- Mailto link for email -->
-            <li><a href="https://maps.app.goo.gl/Q35vqbAXproWj2hM8"></a>12 Compton St</li>
+            <li><a href="mailto:contact@eze.com">contact@eze.com</a></li>
+            <li><a href="https://maps.app.goo.gl/Q35vqbAXproWj2hM8">12 Compton St</a></li>
           </ul>
         </div>
 
-        <!-- Social Media Links -->
+        <!-- Sociala medier-länkar i sidfoten -->
         <div class="footer-social footer-section">
           <p>Följ oss</p>
           <ul>
             <li>
-              <a href="https://instagram.com" target="https://www.instagram.com/" class="social-link">
+              <a href="https://instagram.com" target="_blank" class="social-link">
                 <img src="icons/instagram.svg" alt="Instagram" class="social-icon">
               </a>
             </li>
             <li>
-              <a href="https://linkedin.com" target="https://www.linkedin.com/" class="social-link">
+              <a href="https://linkedin.com" target="_blank" class="social-link">
                 <img src="icons/linkedin.svg" alt="LinkedIn" class="social-icon">
               </a>
             </li>
@@ -139,10 +140,11 @@
         </div>
       </div>
 
-      <!-- Footer Bottom Text -->
+      <!-- Nedre sektion i sidfoten med copyright-info -->
       <div class="footer-bottom">
         <p>Copyright © 2024 Adryan, Ludvig & Stilianos</p>
       </div> 
     </footer>
   </body>
 </html>
+
