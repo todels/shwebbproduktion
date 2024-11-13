@@ -14,45 +14,45 @@
     />
   </head>
   <body>
-  <nav class="navbar">
-  <div class="navbar-container">
-    <!-- Logo with link to index.html -->
-    <div class="logo">
-      <a href="index.html">
-        <img src="icons/logo.svg" alt="Logo" />
-      </a>
-    </div>
+    <nav class="navbar">
+      <div class="navbar-container">
+        <!-- Logo with link to index.html -->
+        <div class="logo">
+          <a href="index.html">
+            <img src="icons/logo.svg" alt="Logo" />
+          </a>
+        </div>
 
-    <!-- Desktop Navigation Links -->
-    <div class="nav-links">
+        <!-- Desktop Navigation Links -->
+        <div class="nav-links">
+          <a href="guides.html" class="nav-item">Nybörjarguides</a> <!-- Link to guides.html -->
+          <a href="resurser.html" class="nav-item">Resurser</a> <!-- Link to resources.html -->
+          <a href="faq.html" class="nav-item">FAQ</a> <!-- Anchor link to FAQ section -->
+        </div>
+
+        <!-- Desktop CTA Button linking to Contact Section -->
+        <a href="contact.html" class="nav-cta-button">Få tillgång</a> <!-- Link to contact section -->
+
+        <!-- Hamburger Button for Mobile -->
+        <button class="hamburger" onclick="toggleMenu()">☰</button>
+      </div>
+    </nav>
+
+    <!-- Mobile Menu (hidden initially) -->
+    <div class="mobile-menu">
       <a href="guides.html" class="nav-item">Nybörjarguides</a> <!-- Link to guides.html -->
       <a href="resurser.html" class="nav-item">Resurser</a> <!-- Link to resources.html -->
       <a href="faq.html" class="nav-item">FAQ</a> <!-- Anchor link to FAQ section -->
+      <a href="contact.html" class="nav-cta-button">Få tillgång</a> <!-- Link to contact section -->
     </div>
 
-    <!-- Desktop CTA Button linking to Contact Section -->
-    <a href="contact.html" class="nav-cta-button">Få tillgång</a> <!-- Link to contact section -->
-
-    <!-- Hamburger Button for Mobile -->
-    <button class="hamburger" onclick="toggleMenu()">☰</button>
-  </div>
-</nav>
-
-<!-- Mobile Menu (hidden initially) -->
-<div class="mobile-menu">
-  <a href="guides.html" class="nav-item">Nybörjarguides</a> <!-- Link to guides.html -->
-  <a href="resurser.html" class="nav-item">Resurser</a> <!-- Link to resources.html -->
-  <a href="faq.html" class="nav-item">FAQ</a> <!-- Anchor link to FAQ section -->
-  <a href="contact.html" class="nav-cta-button">Få tillgång</a> <!-- Link to contact section -->
-</div>
-
-<!-- JavaScript to toggle the mobile menu visibility -->
-<script>
-  function toggleMenu() {
-    const mobileMenu = document.querySelector(".mobile-menu");
-    mobileMenu.classList.toggle("active");
-  }
-</script>
+    <!-- JavaScript to toggle the mobile menu visibility -->
+    <script>
+      function toggleMenu() {
+        const mobileMenu = document.querySelector(".mobile-menu");
+        mobileMenu.classList.toggle("active");
+      }
+    </script>
 
     <section class="title-section">
       <h1>Få tidig tillgång till Easy E</h1>
@@ -62,57 +62,55 @@
       <div class="contact-form">
         <h3>Fyll i formuläret nedan</h3>
         <form action="confirmation.html" method="post">
-      <!-- Name Fields -->
-      <div class="form-group">
-        <div class="form-field">
-          <label for="first-name">Förnamn*</label>
-          <input type="text" id="first-name" name="first-name" placeholder="Eric" required />
-        </div>
-        <div class="form-field">
-          <label for="last-name">Efternamn*</label>
-          <input type="text" id="last-name" name="last-name" placeholder="Wright" required />
-        </div>
+          <!-- Name Fields -->
+          <div class="form-group">
+            <div class="form-field">
+              <label for="first-name">Förnamn*</label>
+              <input type="text" id="first-name" name="first-name" placeholder="Eric" required />
+            </div>
+            <div class="form-field">
+              <label for="last-name">Efternamn*</label>
+              <input type="text" id="last-name" name="last-name" placeholder="Wright" required />
+            </div>
+          </div>
+
+          <!-- Email and Phone Fields -->
+          <div class="form-group">
+            <div class="form-field">
+              <label for="email">Email*</label>
+              <input type="email" id="email" name="email" placeholder="easy@eze.com" required />
+            </div>
+            <div class="form-field">
+              <label for="phone">Telefon*</label>
+              <input type="tel" id="phone" name="phone" placeholder="Wright" required />
+            </div>
+          </div>
+
+          <!-- Radio Button Options -->
+          <label for="reason">Välj anledningen till varför du vill ha beta åtkomst:</label>
+          <div class="radio-options">
+            <input type="radio" id="job" name="reason" value="jobb" required />
+            <label for="job">Jobb</label>
+
+            <input type="radio" id="school" name="reason" value="skola" />
+            <label for="school">Skola</label>
+
+            <input type="radio" id="freelance" name="reason" value="freelance" />
+            <label for="freelance">Freelance</label>
+
+            <input type="radio" id="other" name="reason" value="ovrigt" />
+            <label for="other">Övrigt</label>
+          </div>
+
+          <!-- Message Field -->
+          <label for="message">Meddelande</label>
+          <textarea id="message" name="message" placeholder="Skriv här..." required></textarea>
+
+          <!-- Submit Button -->
+          <button type="submit">Skicka ansökan</button>
+        </form>
       </div>
-
-      <!-- Email and Phone Fields -->
-      <div class="form-group">
-        <div class="form-field">
-          <label for="email">Email*</label>
-          <input type="email" id="email" name="email" placeholder="easy@eze.com" required />
-        </div>
-        <div class="form-field">
-          <label for="phone">Telefon*</label>
-          <input type="tel" id="phone" name="phone" placeholder="Wright" required />
-        </div>
-      </div>
-
-      <!-- Radio Button Options -->
-      <label for="reason">Välj anledningen till varför du vill ha beta åtkomst:</label>
-      <div class="radio-options">
-        <input type="radio" id="job" name="reason" value="jobb" required />
-        <label for="job">Jobb</label>
-
-        <input type="radio" id="school" name="reason" value="skola" />
-        <label for="school">Skola</label>
-
-        <input type="radio" id="freelance" name="reason" value="freelance" />
-        <label for="freelance">Freelance</label>
-
-        <input type="radio" id="other" name="reason" value="ovrigt" />
-        <label for="other">Övrigt</label>
-      </div>
-
-      <!-- Message Field -->
-      <label for="message">Meddelande</label>
-      <textarea id="message" name="message" placeholder="Skriv här..." required></textarea>
-
-      <!-- Submit Button -->
-      <button type="submit">Skicka ansökan</button>
-    </form>
-  </div>
-</section>
-
-
+    </section>
 
     <!-- Footer -->
     <footer class="footer">
@@ -138,33 +136,25 @@
             <li>12 Compton St</li>
           </ul>
         </div>
-      <div class="footer-social footer-section">
-  <p>Följ oss</p>
-  <ul>
-    <li>
-      <a href="#" class="social-link">
-        <img src="icons/instagram.svg" alt="Instagram" class="social-icon">
-      </a>
-    </li>
-    <li>
-      <a href="#" class="social-link">
-        <img src="icons/linkedin.svg" alt="LinkedIn" class="social-icon">
-      </a>
-    </li>
-  </ul>
-</div>
-
+        <div class="footer-social footer-section">
+          <p>Följ oss</p>
+          <ul>
+            <li>
+              <a href="#" class="social-link">
+                <img src="icons/instagram.svg" alt="Instagram" class="social-icon">
+              </a>
+            </li>
+            <li>
+              <a href="#" class="social-link">
+                <img src="icons/linkedin.svg" alt="LinkedIn" class="social-icon">
+              </a>
+            </li>
+          </ul>
+        </div>
       </div>
       <div class="footer-bottom">
         <p>Copyright © 2024 Adryan, Ludvig & Stilianos</p>
       </div> 
     </footer>
-
-  </body>
-</html>
-
-<!-- OBS! All text och alt text är ai genererade för att spara lite tid och lät mig få djupdyka i uppgiften, gäller alla sidor -->
-
-
   </body>
 </html>
