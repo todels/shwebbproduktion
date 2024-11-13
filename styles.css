@@ -242,7 +242,7 @@ h2 {
 
 
 /* Responsive Styles */
-@media (max-width: 768px) {
+@media (max-width: 1100px) {
   .nav-links,
   .nav-cta-button {
     display: none; /* Hide desktop links and CTA button on mobile */
@@ -255,6 +255,16 @@ h2 {
   /* Adjust padding to prevent navbar items from overflowing */
   .navbar-container {
     padding: 0 10px;
+  }
+  .cards {
+    flex-direction: column;
+    align-items: center; /* Ensure the cards are centrally aligned on smaller screens */
+  }
+  .phone-icon,
+  .cable-icon,
+  .computer-icon,
+  .mouse-icon {
+    display: none;
   }
 }
 .hero {
@@ -349,14 +359,6 @@ h2 {
   margin: 20px auto;
   max-width: 600px;
 }
-
-@media (max-width: 768px) {
-  .cards {
-    flex-direction: column;
-    align-items: center; /* Ensure the cards are centrally aligned on smaller screens */
-  }
-}
-
 
 .card-image {
   width: 100%;
@@ -531,6 +533,20 @@ h2 {
   /* Center social icons on mobile */
   .footer-social ul {
     justify-content: flex-start;
+  }
+
+  .cta-arrow {
+    display: none;
+  }
+  
+  .contact-section {
+    width: 100%;
+    padding: 20px;
+  }
+
+  .form-group {
+    flex-direction: column;
+    gap: 15px;
   }
 }
 
@@ -762,17 +778,4 @@ h2 {
 
 .contact-form button:hover {
   background-color: #7100fc;
-}
-
-/* Responsive Adjustments */
-@media screen and (max-width: 768px) {
-  .contact-section {
-    width: 100%;
-    padding: 20px;
-  }
-
-  .form-group {
-    flex-direction: column;
-    gap: 15px;
-  }
 }
