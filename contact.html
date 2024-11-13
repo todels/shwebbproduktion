@@ -35,49 +35,52 @@
       <a href="#" class="nav-item">FAQ</a>
       <button class="nav-cta-button">Få tillgång</button>
     </div>
-
-   <section class="contact-section">
+<section class="contact-section">
   <div class="contact-form">
-    <h1>Fyll i formulär</h1> <!-- Form Title -->
-
-    <!-- Form Structure -->
+    <h1>Fyll i formulär</h1>
     <form action="confirmation.html" method="post">
-
-      <!-- First Row of Input Fields (Förnamn and Efternamn) -->
+<!--test-->
+      <!-- Name Fields -->
       <div class="form-group">
         <div class="form-field">
-          <label for="first-name">Förnamn*</label> <!-- Label for First Name -->
+          <label for="first-name">Förnamn*</label>
           <input type="text" id="first-name" name="first-name" placeholder="Eric" required />
         </div>
         <div class="form-field">
-          <label for="last-name">Efternamn*</label> <!-- Label for Last Name -->
+          <label for="last-name">Efternamn*</label>
           <input type="text" id="last-name" name="last-name" placeholder="Wright" required />
         </div>
       </div>
 
-      <!-- Second Row of Input Fields (Email and Telefon) -->
+      <!-- Email and Phone Fields -->
       <div class="form-group">
         <div class="form-field">
-          <label for="email">Email*</label> <!-- Label for Email -->
+          <label for="email">Email*</label>
           <input type="email" id="email" name="email" placeholder="easy@eze.com" required />
         </div>
         <div class="form-field">
-          <label for="phone">Telefon*</label> <!-- Label for Phone -->
+          <label for="phone">Telefon*</label>
           <input type="tel" id="phone" name="phone" placeholder="Wright" required />
         </div>
       </div>
 
-      <!-- Radio Button Options for Reason Selection -->
+      <!-- Radio Button Options -->
       <label for="reason">Välj anledningen till varför du vill ha beta åtkomst:</label>
       <div class="radio-options">
-        <!-- Each radio button has a label styled as a button -->
-        <label><input type="radio" name="reason" value="jobb" required /> Jobb</label>
-        <label><input type="radio" name="reason" value="skola" /> Skola</label>
-        <label><input type="radio" name="reason" value="freelance" /> Freelance</label>
-        <label><input type="radio" name="reason" value="ovrigt" /> Övrigt</label>
+        <input type="radio" id="job" name="reason" value="jobb" required />
+        <label for="job">Jobb</label>
+
+        <input type="radio" id="school" name="reason" value="skola" />
+        <label for="school">Skola</label>
+
+        <input type="radio" id="freelance" name="reason" value="freelance" />
+        <label for="freelance">Freelance</label>
+
+        <input type="radio" id="other" name="reason" value="ovrigt" />
+        <label for="other">Övrigt</label>
       </div>
 
-      <!-- Textarea for the Message -->
+      <!-- Message Field -->
       <label for="message">Meddelande</label>
       <textarea id="message" name="message" placeholder="Skriv här..." required></textarea>
 
@@ -86,6 +89,7 @@
     </form>
   </div>
 </section>
+
 
 
     <!-- Footer -->
