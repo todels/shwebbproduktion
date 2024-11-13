@@ -84,7 +84,6 @@ body {
   position: relative;
   transition: color 0.3s;
 }
-
 /* Smooth underline animation */
 .nav-item::after {
   content: "";
