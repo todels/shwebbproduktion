@@ -11,18 +11,43 @@
     <link href="https://fonts.googleapis.com/css2?family=Gochi+Hand&family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap" rel="stylesheet">  
   </head>
   <body>
-    <!-- Header (Navbar) -->
-    <nav class="navbar">
-      <div class="logo">
-        <img src="icons/logo.svg" alt="Logo">
-      </div>
-      <div class="nav-links">
-        <a href="#" class="nav-item">Nybörjarguides</a>
-        <a href="#" class="nav-item">Verktyg & Resurser</a>
-        <a href="#" class="nav-item">FAQ</a>
-      </div>
-      <button class="nav-cta-button">Få tillgång</button>
-    </nav>
+    <!-- nav -->
+<nav class="navbar">
+  <div class="navbar-container">
+    <div class="logo">
+      <img src="icons/logo.svg" alt="Logo" />
+    </div>
+
+    <!-- Desktop Navigation Links -->
+    <div class="nav-links">
+      <a href="#" class="nav-item">Nybörjarguides</a>
+      <a href="#" class="nav-item">Resurser</a>
+      <a href="#" class="nav-item">FAQ</a>
+    </div>
+
+    <!-- Desktop CTA Button -->
+    <button class="nav-cta-button">Få tillgång</button>
+
+    <!-- Hamburger Button for Mobile -->
+    <button class="hamburger" onclick="toggleMenu()">☰</button>
+  </div>
+</nav>
+
+<!-- Mobile Menu (hidden initially) -->
+<div class="mobile-menu">
+  <a href="#" class="nav-item">Nybörjarguides</a>
+  <a href="#" class="nav-item">Resurser</a>
+  <a href="#" class="nav-item">FAQ</a>
+  <button class="nav-cta-button">Få tillgång</button>
+</div>
+
+<!-- JavaScript to toggle the mobile menu visibility -->
+<script>
+  function toggleMenu() {
+    const mobileMenu = document.querySelector(".mobile-menu");
+    mobileMenu.classList.toggle("active");
+  }
+</script>
 
     <!-- Hero Section -->
     <div class="hero">
@@ -57,8 +82,10 @@
     <!-- Call to Action Section -->
     <section class="cta-section">
       <h2>Redo att lära dig?</h2>
-      <button class="cta-large">Bli expert idag</button>
-      <div class="cta-arrow"></div> <!-- Arrow element outside the button -->
+      <button class="cta-large">
+        Bli expert idag
+        <img src="icons/arrow.svg" class="cta-arrow"></img> <!-- Arrow element outside the button -->
+      </button>
     </section>
 
     <!-- Footer Section -->
