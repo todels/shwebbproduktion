@@ -48,6 +48,7 @@
   /* Mindre rubrik för bl.a korten med stor och fet stil för att fånga användarens uppmärksamhet. */
 
   h3 {
+    font-family: "Inter";
     font-size: 24px;
     font-weight: 600;
     color: #000;
