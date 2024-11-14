@@ -439,7 +439,7 @@ p {
   min-width: 0;
 }
 
-/* Stil för submit-knappen i formuläret.
+/* Stil för submit-knappen i formuläret och hem knapp i confirmation.
      Svart bakgrund med vit text och rundade kanter för en modern look. */
 
 .submit-button {
@@ -454,6 +454,11 @@ p {
   flex-shrink: 0;
   text-decoration: none;
 }
+
+.submit-button:hover {
+  background-color: #7100fc;
+}
+
 
 /* Sektionen för "Nybörjarguides" eller erbjudanden.
      Texten är centrerad och sektionen har marginaler för att separera den från andra delar av sidan. */
