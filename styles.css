@@ -100,18 +100,35 @@ h3 {
   gap: 40px;
 }
 
-/* Stil för individuella navigeringslänkar. De är svarta utan underline-effekt. */
+/* Stil för individuella navigeringslänkar. De är svarta utan underline-effekt, 
+   men får en snygg underline-effekt vid hover med en mjuk övergång. */
 
 .nav-item {
   color: #000;
   font-size: 18px;
   font-weight: 500;
   text-decoration: none; /* Ingen underline */
+  position: relative;
   transition: color 0.3s;
+}
+
+.nav-item::after {
+  content: "";
+  position: absolute;
+  width: 0;
+  height: 2px;
+  background-color: #7100fc;
+  bottom: -4px;
+  left: 0;
+  transition: width 0.3s ease; /* Mjuk övergång för underline */
 }
 
 .nav-item:hover {
   color: #7100fc;
+}
+
+.nav-item:hover::after {
+  width: 100%; /* Underline växer från vänster till höger vid hover */
 }
 
 /* CTA-knapp i navigeringen. Knappen är placerad till höger och har en snygg, rundad form.
