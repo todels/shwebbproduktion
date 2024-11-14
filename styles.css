@@ -452,6 +452,7 @@ p {
   border-radius: 22px;
   cursor: pointer;
   flex-shrink: 0;
+  text-decoration: none;
 }
 
 /* Sektionen för "Nybörjarguides" eller erbjudanden.
