@@ -42,6 +42,16 @@
     line-height: 80px;
     letter-spacing: -2px;
     color: black;
+    margin: 12px;
+  }
+
+  /* Mindre rubrik för bl.a korten med stor och fet stil för att fånga användarens uppmärksamhet. */
+
+  h3 {
+    font-size: 24px;
+    font-weight: 600;
+    color: #000;
+    margin: 10px 0;
   }
   
   /* Styling för navigeringsmenyn (navbar). 
@@ -203,13 +213,6 @@
   .faq-section {
     text-align: center;
     padding: 100px 20px 50px;
-  }
-  
-  .faq-section h1 {
-    font-size: 48px;
-    font-weight: 700;
-    color: #000;
-    margin-bottom: 10px;
   }
   
   /* Undertext till FAQ-sektionen, med mindre text och en lite mjukare färgton. */
@@ -413,19 +416,6 @@
     margin: 50px 0;
   }
   
-  .offerings h2 {
-    font-size: 48px;
-    font-weight: 600;
-    color: #000;
-  }
-  
-  .offerings p {
-    font-size: 18px;
-    color: rgba(0, 0, 0, 0.7);
-    margin: 20px auto;
-    max-width: 600px;
-  }
-  
   /* Stil för bilderna i korten.
      Bilderna fyller hela kortets bredd och har rundade hörn för en mjukare känsla. */
   
@@ -456,11 +446,9 @@
   }
   
 
-/* Call-to-Action (CTA) Sektion. Denna sektion har en ljus bakgrundsfärg och är centrerad.
-   Den har padding för att skapa utrymme runt texten. */
+  /* Call-to-Action (CTA) Sektion. Den har padding för att skapa utrymme runt texten. */
 
    .cta-section {
-    background-color: #FCFBF9;
     text-align: center;
     padding: 50px 0;
     position: relative;
@@ -657,6 +645,12 @@
       flex-direction: column;
       gap: 15px;
     }
+
+    /* Förminskar texten när det blir en för smal display, effektivt för Guides-sidans respnsonsivitet */
+
+    h1 {
+      font-size: 54px;
+    }
   }
   
 /* Sektion för Guidekort. Innehållet centreras och får marginal för att skapa utrymme runt hela sektionen. */
@@ -673,32 +667,6 @@
   flex-direction: column;
   align-items: center;
   margin-bottom: 30px;
-}
-
-/* Rubrikbild (handwritten-heading) med specifik bredd och utrymme nedanför för att separera från övrig text. */
-
-.handwritten-heading {
-  width: 250px;
-  height: auto;
-  margin-bottom: 20px;
-}
-
-/* Stilar för rubriken i guidekort-sektionen, med stor fontstorlek och fet stil för att framhäva texten. */
-
-.guide-cards h2 {
-  font-size: 64px;
-  font-weight: 600;
-  color: #000;
-  margin: 10px 0;
-}
-
-/* Paragraftext i guidekort-sektionen med en läsvänlig maxbredd och ljusare textfärg. */
-
-.guide-cards p {
-  font-size: 18px;
-  color: rgba(0, 0, 0, 0.7);
-  margin: 0 auto;
-  max-width: 600px;
 }
 
 /* Kortsektion med flexlayout för att placera kort bredvid varandra.
@@ -738,20 +706,6 @@
   display: flex;
   justify-content: center;
   align-items: center;
-}
-
-.card-icon img {
-  width: 50px;
-  height: 50px;
-}
-
-/* Rubrik för korten med stor och fet stil för att fånga användarens uppmärksamhet. */
-
-.card h3 {
-  font-size: 24px;
-  font-weight: 600;
-  color: #000;
-  margin: 10px 0;
 }
 
 /* Korttext med en mindre font och nedtonad färg för en mjukare känsla. */
@@ -813,16 +767,6 @@
   gap: 20px;
   width: 100%;
   max-width: 600px;
-}
-
-/* Titel i kontaktformuläret med centrerad text och större storlek för att framhäva rubriken. */
-
-.contact-form h1 {
-  font-size: 24px;
-  font-weight: 600;
-  text-align: center;
-  margin-bottom: 20px;
-  color: #000;
 }
 
 /* Rad för inputfält med utrymme mellan fält för bättre layout.
@@ -946,18 +890,11 @@
     gap: 10px;
   }
 
-  .contact-form h1 {
-    font-size: 20px;
-  }
 }
 
 @media (max-width: 480px) {
   .contact-section {
     padding: 10px;
-  }
-
-  .contact-form h1 {
-    font-size: 18px;
   }
 
   .contact-form button {
