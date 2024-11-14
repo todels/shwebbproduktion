@@ -9,7 +9,10 @@
     <link rel="icon" type="image/x-icon" href="icons/favicon.png" />
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-    <link href="https://fonts.googleapis.com/css2?family=Gochi+Hand&family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap" rel="stylesheet"/>
+    <link
+      href="https://fonts.googleapis.com/css2?family=Gochi+Hand&family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap"
+      rel="stylesheet"
+    />
   </head>
   <body>
     <!-- Navigeringsmeny högst upp -->
@@ -32,31 +35,32 @@
         <!-- CTA-knapp som länkar till kontaktsidan -->
         <a href="contact.html" class="nav-cta-button">Få tillgång</a>
 
-        <!-- Hamburgermenyn för mobilanvändare -->
-        <button class="hamburger" onclick="toggleMenu()">☰</button>
+        <!-- Hamburgermenyn för mobilanvändare med checkbox för att växla meny -->
+        <input type="checkbox" id="hamburger-toggle" class="hamburger-toggle" />
+
+        <!-- Hamburger-ikon som visas när menyn är stängd -->
+        <label for="hamburger-toggle" class="hamburger-label">☰</label>
+
+        <!-- Exit-knapp som visas när hamburgermenyn är öppen -->
+        <label for="hamburger-toggle" class="exit-label">✖</label>
+
+        <!-- Mobilmeny som visas när checkboxen är ikryssad -->
+        <div class="mobile-menu">
+          <a href="guides.html" class="nav-item">Nybörjarguides</a>
+          <a href="resurser.html" class="nav-item">Resurser</a>
+          <a href="faq.html" class="nav-item">FAQ</a>
+          <a href="contact.html" class="nav-cta-button">Få tillgång</a>
+        </div>
       </div>
     </nav>
-
-    <!-- Mobilmeny som är dold initialt och visas vid klick på hamburgermenyn -->
-    <div class="mobile-menu">
-      <a href="guides.html" class="nav-item">Nybörjarguides</a>
-      <a href="resurser.html" class="nav-item">Resurser</a>
-      <a href="faq.html" class="nav-item">FAQ</a>
-      <a href="contact.html" class="nav-cta-button">Få tillgång</a>
-    </div>
-
-    <!-- JavaScript-funktion för att växla synlighet för mobilmenyn -->
-    <script>
-      function toggleMenu() {
-        const mobileMenu = document.querySelector(".mobile-menu");
-        mobileMenu.classList.toggle("active");
-      }
-    </script>
-
     <!-- Hero-sektion som introducerar kontaktsidan och förklarar hur man får beta-åtkomst -->
     <section class="hero">
       <h1>Få tidig tillgång till Easy E</h1>
-      <p>Fyll i formuläret för att få tidig tillgång till beta-versionen av Easy E! Bli en av de första att prova våra nya funktioner och hjälp oss att göra tjänsten ännu bättre.</p>
+      <p>
+        Fyll i formuläret för att få tidig tillgång till beta-versionen av Easy
+        E! Bli en av de första att prova våra nya funktioner och hjälp oss att
+        göra tjänsten ännu bättre.
+      </p>
     </section>
 
     <!-- Kontaktsektion med formulär för att skicka in ansökan om tidig åtkomst -->
@@ -68,11 +72,23 @@
           <div class="form-group">
             <div class="form-field">
               <label for="first-name">Förnamn*</label>
-              <input type="text" id="first-name" name="first-name" placeholder="Eric" required />
+              <input
+                type="text"
+                id="first-name"
+                name="first-name"
+                placeholder="Eric"
+                required
+              />
             </div>
             <div class="form-field">
               <label for="last-name">Efternamn*</label>
-              <input type="text" id="last-name" name="last-name" placeholder="Wright" required />
+              <input
+                type="text"
+                id="last-name"
+                name="last-name"
+                placeholder="Wright"
+                required
+              />
             </div>
           </div>
 
@@ -80,16 +96,30 @@
           <div class="form-group">
             <div class="form-field">
               <label for="email">Email*</label>
-              <input type="email" id="email" name="email" placeholder="easy@eze.com" required />
+              <input
+                type="email"
+                id="email"
+                name="email"
+                placeholder="easy@eze.com"
+                required
+              />
             </div>
             <div class="form-field">
               <label for="phone">Telefon*</label>
-              <input type="tel" id="phone" name="phone" placeholder="Wright" required />
+              <input
+                type="tel"
+                id="phone"
+                name="phone"
+                placeholder="Wright"
+                required
+              />
             </div>
           </div>
 
           <!-- Radioknappar för att välja anledning till att ansöka om beta-åtkomst -->
-          <label for="reason">Välj anledningen till varför du vill ha beta åtkomst:</label>
+          <label for="reason"
+            >Välj anledningen till varför du vill ha beta åtkomst:</label
+          >
           <div class="radio-options">
             <input type="radio" id="job" name="reason" value="jobb" required />
             <label for="job">Jobb</label>
@@ -97,7 +127,12 @@
             <input type="radio" id="school" name="reason" value="skola" />
             <label for="school">Skola</label>
 
-            <input type="radio" id="freelance" name="reason" value="freelance" />
+            <input
+              type="radio"
+              id="freelance"
+              name="reason"
+              value="freelance"
+            />
             <label for="freelance">Freelance</label>
 
             <input type="radio" id="other" name="reason" value="ovrigt" />
@@ -106,7 +141,12 @@
 
           <!-- Textfält för meddelande -->
           <label for="message">Meddelande</label>
-          <textarea id="message" name="message" placeholder="Skriv här..." required></textarea>
+          <textarea
+            id="message"
+            name="message"
+            placeholder="Skriv här..."
+            required
+          ></textarea>
 
           <!-- Skicka-knappen -->
           <button type="submit">Skicka ansökan</button>
@@ -142,7 +182,11 @@
           <ul>
             <li><a href="tel:01-234 5678 90">01-234 5678 90</a></li>
             <li><a href="mailto:contact@eze.com">contact@eze.com</a></li>
-            <li><a href="https://maps.app.goo.gl/Q35vqbAXproWj2hM8">12 Compton St</a></li>
+            <li>
+              <a href="https://maps.app.goo.gl/Q35vqbAXproWj2hM8"
+                >12 Compton St</a
+              >
+            </li>
           </ul>
         </div>
 
@@ -151,13 +195,29 @@
           <p>Följ oss</p>
           <ul>
             <li>
-              <a href="https://instagram.com" target="_blank" class="social-link">
-                <img src="icons/instagram.svg" alt="Instagram" class="social-icon">
+              <a
+                href="https://instagram.com"
+                target="_blank"
+                class="social-link"
+              >
+                <img
+                  src="icons/instagram.svg"
+                  alt="Instagram"
+                  class="social-icon"
+                />
               </a>
             </li>
             <li>
-              <a href="https://linkedin.com" target="_blank" class="social-link">
-                <img src="icons/linkedin.svg" alt="LinkedIn" class="social-icon">
+              <a
+                href="https://linkedin.com"
+                target="_blank"
+                class="social-link"
+              >
+                <img
+                  src="icons/linkedin.svg"
+                  alt="LinkedIn"
+                  class="social-icon"
+                />
               </a>
             </li>
           </ul>
@@ -167,7 +227,7 @@
       <!-- Nedre sektion i sidfoten med copyright-info -->
       <div class="footer-bottom">
         <p>Copyright © 2024 Adryan, Ludvig & Stilianos</p>
-      </div> 
+      </div>
     </footer>
   </body>
 </html>

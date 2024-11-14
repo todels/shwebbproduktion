@@ -5,11 +5,14 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Easy E FAQ</title>
-    <link rel="stylesheet" href="styles.css">
-    <link rel="icon" type="image/x-icon" href="icons/favicon.png">
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>    
-    <link href="https://fonts.googleapis.com/css2?family=Gochi+Hand&family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap" rel="stylesheet">  
+    <link rel="stylesheet" href="styles.css" />
+    <link rel="icon" type="image/x-icon" href="icons/favicon.png" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Gochi+Hand&family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap"
+      rel="stylesheet"
+    />
   </head>
   <body>
     <!-- Navigeringsmeny högst upp -->
@@ -32,54 +35,67 @@
         <!-- CTA-knapp som länkar till kontaktsidan -->
         <a href="contact.html" class="nav-cta-button">Få tillgång</a>
 
-        <!-- Hamburgermenyn för mobilanvändare -->
-        <button class="hamburger" onclick="toggleMenu()">☰</button>
+        <!-- Hamburgermenyn för mobilanvändare med checkbox för att växla meny -->
+        <input type="checkbox" id="hamburger-toggle" class="hamburger-toggle" />
+
+        <!-- Hamburger-ikon som visas när menyn är stängd -->
+        <label for="hamburger-toggle" class="hamburger-label">☰</label>
+
+        <!-- Exit-knapp som visas när hamburgermenyn är öppen -->
+        <label for="hamburger-toggle" class="exit-label">✖</label>
+
+        <!-- Mobilmeny som visas när checkboxen är ikryssad -->
+        <div class="mobile-menu">
+          <a href="guides.html" class="nav-item">Nybörjarguides</a>
+          <a href="resurser.html" class="nav-item">Resurser</a>
+          <a href="faq.html" class="nav-item">FAQ</a>
+          <a href="contact.html" class="nav-cta-button">Få tillgång</a>
+        </div>
       </div>
     </nav>
-
-    <!-- Mobilmeny som är dold initialt och visas vid klick på hamburgermenyn -->
-    <div class="mobile-menu">
-      <a href="guides.html" class="nav-item">Nybörjarguides</a>
-      <a href="resurser.html" class="nav-item">Resurser</a>
-      <a href="faq.html" class="nav-item">FAQ</a>
-      <a href="contact.html" class="nav-cta-button">Få tillgång</a>
-    </div>
-
-    <!-- JavaScript-funktion för att växla synlighet för mobilmenyn -->
-    <script>
-      function toggleMenu() {
-        const mobileMenu = document.querySelector(".mobile-menu");
-        mobileMenu.classList.toggle("active");
-      }
-    </script>
-
     <!-- FAQ-sektion med vanliga frågor och svar -->
     <section class="faq-section" id="faq">
       <h1>FAQ</h1>
-      <p class="faq-subtitle">Våra nybörjarguider gör det enkelt att förstå och använda teknik</p>
+      <p class="faq-subtitle">
+        Våra nybörjarguider gör det enkelt att förstå och använda teknik
+      </p>
       <div class="faq-items">
         <div class="faq-item">
           <button class="faq-question">Vilka är Easy E?</button>
           <div class="faq-answer">
-            <p>Easy E är en plattform designad för att hjälpa nybörjare att förstå grundläggande tekniska koncept och förbättra sin tekniska kunskap.</p>
+            <p>
+              Easy E är en plattform designad för att hjälpa nybörjare att
+              förstå grundläggande tekniska koncept och förbättra sin tekniska
+              kunskap.
+            </p>
           </div>
         </div>
         <div class="faq-item">
           <button class="faq-question">Hur använder jag Easy E?</button>
           <div class="faq-answer">
-            <p>Easy E är designat för att hjälpa nybörjare att lära sig om teknik på ett enkelt sätt. Börja med att utforska våra guider och resurser.</p>
+            <p>
+              Easy E är designat för att hjälpa nybörjare att lära sig om teknik
+              på ett enkelt sätt. Börja med att utforska våra guider och
+              resurser.
+            </p>
           </div>
         </div>
         <div class="faq-item">
           <button class="faq-question">Vilka resurser erbjuder Easy E?</button>
           <div class="faq-answer">
-            <p>Vi erbjuder en mängd olika guider och resurser inom teknik, från grundläggande användning till avancerade tips och tricks.</p>
+            <p>
+              Vi erbjuder en mängd olika guider och resurser inom teknik, från
+              grundläggande användning till avancerade tips och tricks.
+            </p>
           </div>
         </div>
         <div class="faq-item">
           <button class="faq-question">Är Easy E gratis?</button>
           <div class="faq-answer">
-            <p>Ja, Easy E är helt gratis att använda för alla. Vi strävar efter att göra teknik tillgänglig för alla, oavsett förkunskaper.</p>
+            <p>
+              Ja, Easy E är helt gratis att använda för alla. Vi strävar efter
+              att göra teknik tillgänglig för alla, oavsett förkunskaper.
+            </p>
           </div>
         </div>
         <div class="faq-item">
@@ -93,7 +109,7 @@
 
     <!-- JavaScript för FAQ-toggle-funktion som öppnar och stänger svaren -->
     <script>
-      document.querySelectorAll(".faq-question").forEach(button => {
+      document.querySelectorAll(".faq-question").forEach((button) => {
         button.addEventListener("click", () => {
           const faqItem = button.parentElement;
           faqItem.classList.toggle("open");
@@ -104,8 +120,11 @@
     <!-- Sektion för Call to Action med en stor knapp som uppmuntrar användaren att lära sig mer -->
     <section class="cta-section">
       <h2>Redo att lära dig?</h2>
-      <button class="cta-large" onclick="window.location.href='contact.html'">Läs mer →</button>
-      <img src="icons/arrow.svg" class="cta-arrow" alt="Pil"> <!-- Dekorativ pil utanför knappen -->
+      <button class="cta-large" onclick="window.location.href='contact.html'">
+        Läs mer →
+      </button>
+      <img src="icons/arrow.svg" class="cta-arrow" alt="Pil" />
+      <!-- Dekorativ pil utanför knappen -->
     </section>
 
     <!-- Sidfot med navigationslänkar, kontaktinformation och länkar till sociala medier -->
@@ -136,7 +155,11 @@
           <ul>
             <li><a href="tel:01-234 5678 90">01-234 5678 90</a></li>
             <li><a href="mailto:contact@eze.com">contact@eze.com</a></li>
-            <li><a href="https://maps.app.goo.gl/Q35vqbAXproWj2hM8">12 Compton St</a></li>
+            <li>
+              <a href="https://maps.app.goo.gl/Q35vqbAXproWj2hM8"
+                >12 Compton St</a
+              >
+            </li>
           </ul>
         </div>
 
@@ -145,13 +168,29 @@
           <p>Följ oss</p>
           <ul>
             <li>
-              <a href="https://instagram.com" target="_blank" class="social-link">
-                <img src="icons/instagram.svg" alt="Instagram" class="social-icon">
+              <a
+                href="https://instagram.com"
+                target="_blank"
+                class="social-link"
+              >
+                <img
+                  src="icons/instagram.svg"
+                  alt="Instagram"
+                  class="social-icon"
+                />
               </a>
             </li>
             <li>
-              <a href="https://linkedin.com" target="_blank" class="social-link">
-                <img src="icons/linkedin.svg" alt="LinkedIn" class="social-icon">
+              <a
+                href="https://linkedin.com"
+                target="_blank"
+                class="social-link"
+              >
+                <img
+                  src="icons/linkedin.svg"
+                  alt="LinkedIn"
+                  class="social-icon"
+                />
               </a>
             </li>
           </ul>
@@ -161,7 +200,7 @@
       <!-- Nedre sektion i sidfoten med copyright-info -->
       <div class="footer-bottom">
         <p>Copyright © 2024 Adryan, Ludvig & Stilianos</p>
-      </div> 
+      </div>
     </footer>
   </body>
 </html>
