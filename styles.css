@@ -442,6 +442,7 @@ h3 {
   flex: 1;
   background-color: #fcfbf9;
   color: #333;
+  min-width: 0;
 }
 
 /* Stil för submit-knappen i formuläret.
@@ -454,8 +455,9 @@ h3 {
   font-size: 16px;
   border: none;
   height: 100%;
-  border-radius: 200px;
+  border-radius: 22px;
   cursor: pointer;
+  flex-shrink: 0;
 }
 
 /* Sektionen för "Nybörjarguides" eller erbjudanden.
@@ -915,4 +917,12 @@ h3 {
     width: 100%;
   }
   
+  .signup-form {
+    width: 90%; /* Reduce width to fit smaller screens */
+    max-width: none; /* Remove max-width constraint */
+  }
+
+  .submit-button {
+    padding: 14px 16px; /* Adjust padding for smaller screens */
+  }
 }
