@@ -153,6 +153,34 @@ h3 {
   background-color: #7100fc;
 }
 
+/* Hamburgermenyn och exit-knappen ska vara dolda som standard */
+
+.hamburger-label,
+.exit-label {
+  display: none;
+  font-size: 24px;
+  background: none;
+  border: none;
+  cursor: pointer;
+  color: #000;
+  position: absolute;
+  right: 20px;
+  z-index: 1001;
+}
+
+/* Visa hamburgermenyn-ikonen endast när checkbox är checked */
+
+.hamburger-toggle:not(:checked) ~ .hamburger-label {
+  display: block;
+}
+
+.hamburger-toggle:checked ~ .exit-label {
+  display: block;
+  top: 20px;
+  right: 20px;
+  z-index: 1002;
+}
+
 /* Menyn för mobila enheter. Tar hela skärmen, centrerar länkarna, och visas bara när aktiv. */
 
 .mobile-menu {
@@ -207,37 +235,6 @@ h3 {
 .hamburger-toggle:checked ~ .nav-links,
 .hamburger-toggle:checked ~ .nav-cta-button {
   display: none;
-}
-
-/* Kontrollera hamburgermenyn- och exit-ikonernas synlighet endast när checkboxen är aktiverad */
-.hamburger-label,
-.exit-label {
-  display: none;
-}
-
-.hamburger-toggle:checked ~ .exit-label,
-.hamburger-label {
-  display: block;
-  font-size: 24px;
-  background: none;
-  border: none;
-  cursor: pointer;
-  color: #000;
-  position: absolute;
-  right: 20px;
-  z-index: 1001;
-}
-
-/* Dölj hamburgermenyn-ikonen och visa exit-knappen när menyn är öppen */
-.hamburger-toggle:checked + .hamburger-label {
-  display: none;
-}
-
-.hamburger-toggle:checked ~ .exit-label {
-  display: block;
-  top: 20px;
-  right: 20px;
-  z-index: 1002;
 }
 
 /* FAQ-sektionen, som har centrering och padding för att separera den från navigeringen ovanför. */
