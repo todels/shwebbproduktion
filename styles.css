@@ -427,25 +427,6 @@
     border-bottom: 2px solid #ddd;
     border-radius: 24px;
   }
-  
-  /* Stil för knapparna i korten.
-     Svarta knappar med vit text och rundade kanter som ändrar färg vid hover för interaktivitet. */
-  
-  .card button {
-    background-color: #000;
-    color: white;
-    border: none;
-    padding: 10px 20px;
-    margin: 20px;
-    border-radius: 30px;
-    cursor: pointer;
-    align-self: center;
-  }
-  
-  .card button:hover {
-    background-color: #444;
-  }
-  
 
   /* Call-to-Action (CTA) Sektion. Den har padding för att skapa utrymme runt texten. */
 
@@ -483,11 +464,10 @@
     bottom: 50px;
   }
   
-  /* Footer-sektionen har en ljus bakgrund och centrerad text.
+  /* Footer-sektionen har centrerad text.
      Padding skapar utrymme runt hela sektionen för en renare design. */
   
   .footer {
-    background-color: #fcfbf9;
     padding: 70px 0;
     color: #000;
     text-align: center;
@@ -502,13 +482,6 @@
     max-width: 1440px;
     margin: 0 auto;
     gap: 176px;
-  }
-  
-  /* Footer-logotypen har stor och fet text för att stå ut. */
-  
-  .footer-logo {
-    font-size: 40px;
-    font-weight: bold;
   }
   
   /* Footer-sektioner för navigation, kontakt och sociala medier, som alla är vänsterjusterade.
@@ -694,19 +667,13 @@
   text-align: center;
 }
 
-/* Ikon-stil inom korten, med rundad bakgrund och padding för att centrera ikonen.
+/* Ikon-stil inom korten, med padding för att centrera ikonen.
    Varje ikon placeras ovanför korttexten. */
 
 .card-icon {
-  background-color: #fcfcfc;
-  border-radius: 50%;
   padding: 20px;
   margin-bottom: 20px;
-  width: 80px;
-  height: 80px;
   display: flex;
-  justify-content: center;
-  align-items: center;
 }
 
 /* Korttext med en mindre font och nedtonad färg för en mjukare känsla. */
@@ -741,8 +708,7 @@
   margin: 60px 0;
 }
 
-/* Kontaktsektion med centrerad layout och flexibel bredd för olika skärmstorlekar.
-   Bakgrunden är ljus för att matcha resten av sidan. */
+/* Kontaktsektion med centrerad layout och flexibel bredd för olika skärmstorlekar. */
 
 .contact-section {
   display: flex;
@@ -754,7 +720,6 @@
   max-width: 600px;
   gap: 40px;
   flex-direction: column;
-  background-color: #fcfbf9;
 }
 
 /* Layout för kontaktformuläret med vertikal layout och centrerad text.
