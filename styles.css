@@ -72,6 +72,23 @@ h3 {
   padding: 24px 16px; /* Säkerställer padding för bättre justering */
 }
 
+/* Styling för navigeringsmenyn (navbar).
+   Menyn är fast placerad högst upp på sidan så att den alltid är synlig.
+   Box-shadow ger en subtil skugga för att ge djup. */
+
+.navbar {
+  width: 100%;
+  background-color: #fcfbf9;
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 1000;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  display: flex;
+  justify-content: center;
+  padding: 24px 16px; /* Säkerställer padding för bättre justering */
+}
+
 /* Navbaren får en container som hjälper att centrera innehållet och justera bredden
    beroende på skärmstorleken, med ett maxvärde så den inte blir för bred på stora skärmar. */
 
@@ -158,14 +175,11 @@ h3 {
 
 .hamburger {
   display: none;
-  font-size: 24px;
-  background: none;
-  border: none;
-  cursor: pointer;
-  color: #000;
-  position: absolute;
-  right: 20px;
-  z-index: 1001;
+}
+
+/* Hamburgermenyn som visas på mobila enheter */
+.hamburger-label {
+  display: none;
 }
 
 /* Menyn för mobila enheter. Tar hela skärmen, centrerar länkarna, och visas bara när aktiv. */
@@ -188,40 +202,15 @@ h3 {
   transition: opacity 0.3s ease;
 }
 
-/* Växla aktivt läge för mobilmenyn */
-
-input[type="checkbox"]:checked + .mobile-menu {
+/* Visa mobilmenyn när checkboxen är ikryssad */
+.hamburger-toggle:checked ~ .mobile-menu {
+  display: flex;
   opacity: 1;
   pointer-events: all;
 }
 
-/* Stil för navigationslänkar och CTA-knapp i mobilmenyn.
-   Länkarna är större för att passa mobilformat och knappen anpassas i storlek. */
-
-.mobile-menu .nav-item {
-  font-size: 20px;
-  color: #000;
-  text-decoration: none;
-}
-
-.mobile-menu .nav-cta-button {
-  padding: 12px 20px;
-  width: 80%;
-  font-size: 16px;
-  border-radius: 20px;
-}
-
-/* Hamburgermeny input för checkbox-växling */
-.hamburger-toggle {
-  display: none;
-}
-
-.hamburger-label {
-  display: none;
-}
-
 @media (max-width: 768px) {
-  /* Dölj desktop-navigeringslänkar och CTA-knapp */
+  /* Dölj desktop-länkar och CTA-knapp på mobila enheter */
   .nav-links,
   .nav-cta-button {
     display: none;
