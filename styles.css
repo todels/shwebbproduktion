@@ -54,6 +54,14 @@ h3 {
   color: #000;
   margin: 10px 0;
 }
+
+p {
+  font-family: "Inter";
+  font-size: 18px;
+  color: rgba(0, 0, 0, 0.8);
+  margin: 0;
+}
+
 /* Styling för navigeringsmenyn (navbar).
    Menyn är fast placerad högst upp på sidan så att den alltid är synlig.
    Box-shadow ger en subtil skugga för att ge djup. */
@@ -241,19 +249,11 @@ h3 {
   padding: 100px 20px 50px;
 }
 
-/* Undertext till FAQ-sektionen, med mindre text och en lite mjukare färgton. */
-
-.faq-subtitle {
-  font-size: 18px;
-  color: rgba(0, 0, 0, 0.6);
-  margin-bottom: 30px;
-}
-
 /* FAQ-lista centrerad med maxbredd för att hålla det läsvänligt. */
 
 .faq-items {
   max-width: 800px;
-  margin: 0 auto;
+  margin: 100px 0 0 0;
 }
 
 /* Enskilda FAQ-poster med en ljus bakgrund och rundade hörn för en mjukare look. */
