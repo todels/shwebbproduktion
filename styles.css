@@ -168,12 +168,6 @@ h3 {
   z-index: 1001;
 }
 
-/* Visa hamburgermenyn-ikonen endast när menyn är stängd */
-
-.hamburger-toggle:not(:checked) ~ .hamburger-label {
-  display: block;
-}
-
 .hamburger-toggle:checked ~ .exit-label {
   display: block;
   top: 20px;
