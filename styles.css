@@ -71,6 +71,23 @@ h3 {
   padding: 24px 16px; /* Säkerställer padding för bättre justering */
 }
 
+/* Styling för navigeringsmenyn (navbar).
+   Menyn är fast placerad högst upp på sidan så att den alltid är synlig.
+   Box-shadow ger en subtil skugga för att ge djup. */
+
+.navbar {
+  width: 100%;
+  background-color: #fcfbf9;
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 1000;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  display: flex;
+  justify-content: center;
+  padding: 24px 16px; /* Säkerställer padding för bättre justering */
+}
+
 /* Navbaren får en container som hjälper att centrera innehållet och justera bredden
    beroende på skärmstorleken, med ett maxvärde så den inte blir för bred på stora skärmar. */
 
@@ -216,8 +233,42 @@ h3 {
   display: none;
 }
 
+/* Hamburgermenyn-ikon för att öppna */
 .hamburger-label {
   display: none;
+}
+
+/* Exit-knappen som visas när mobilmenyn är öppen */
+.exit-label {
+  display: none;
+}
+
+/* Utan nya media queries, hantera både hamburgare- och exit-knappens synlighet genom CSS */
+
+.hamburger-label,
+.exit-label {
+  display: block;
+  font-size: 24px;
+  background: none;
+  border: none;
+  cursor: pointer;
+  color: #000;
+  position: absolute;
+  right: 20px;
+  z-index: 1001;
+}
+
+/* Dölj hamburgermenyn-ikonen när menyn är öppen */
+.hamburger-toggle:checked + .hamburger-label {
+  display: none;
+}
+
+/* Visa exit-knappen när menyn är öppen */
+.hamburger-toggle:checked ~ .exit-label {
+  display: block;
+  right: 20px;
+  top: 20px;
+  z-index: 1002;
 }
 
 /* FAQ-sektionen, som har centrering och padding för att separera den från navigeringen ovanför. */
@@ -332,7 +383,7 @@ h3 {
   .mouse-icon {
     display: none;
   }
-  
+
   /* Dölj desktop-navigeringslänkar och CTA-knapp */
   .nav-links,
   .nav-cta-button {
