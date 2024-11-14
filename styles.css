@@ -220,27 +220,6 @@ h3 {
   display: none;
 }
 
-@media (max-width: 768px) {
-  /* Dölj desktop-navigeringslänkar och CTA-knapp */
-  .nav-links,
-  .nav-cta-button {
-    display: none;
-  }
-
-  /* Visa hamburgermenyn-ikonen på mobila enheter */
-  .hamburger-label {
-    display: block;
-    font-size: 24px;
-    background: none;
-    border: none;
-    cursor: pointer;
-    color: #000;
-    position: absolute;
-    right: 20px;
-    z-index: 1001;
-  }
-}
-
 /* FAQ-sektionen, som har centrering och padding för att separera den från navigeringen ovanför. */
 
 .faq-section {
@@ -352,6 +331,25 @@ h3 {
   .computer-icon,
   .mouse-icon {
     display: none;
+  }
+  
+  /* Dölj desktop-navigeringslänkar och CTA-knapp */
+  .nav-links,
+  .nav-cta-button {
+    display: none;
+  }
+
+  /* Visa hamburgermenyn-ikonen på mobila enheter */
+  .hamburger-label {
+    display: block;
+    font-size: 24px;
+    background: none;
+    border: none;
+    cursor: pointer;
+    color: #000;
+    position: absolute;
+    right: 20px;
+    z-index: 1001;
   }
 }
 
