@@ -4,8 +4,9 @@
     <!-- Grundläggande metadata och länk till CSS-stilar, favicon, och Google Fonts för typsnitt -->
     <meta charset="UTF-8"/>
     <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-    <title>Easy E Resurser</title>
+    <title>Easy E</title>
     <link rel="stylesheet" href="styles.css"/>
+    <script src="main.js" defer></script>
     <link rel="icon" type="image/x-icon" href="icons/favicon.png"/>
     <link rel="preconnect" href="https://fonts.googleapis.com"/>
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin/>
@@ -29,7 +30,14 @@
           <a href="faq.html" class="nav-item">FAQ</a>
         </div>
 
-        <!-- CTA-knapp som länkar till kontaktsidan -->
+        
+    <!-- CTA-knapp som länkar till kontaktsidan -->
+    <!-- Light/Dark Mode Toggle -->
+    <button id="dark-mode-toggle" class="dark-mode-toggle">
+      <img id="toggle-icon" src="icons/sun.svg" alt="Light Mode Icon">
+      <span>Light</span>
+    </button>
+    
         <a href="contact.html" class="nav-cta-button">Få tillgång</a>
 
         <!-- Hamburgermenyn för mobilanvändare med checkbox för att växla meny -->
