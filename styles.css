@@ -1093,6 +1093,26 @@ body.dark-mode .contact-section button:hover {
 body.dark-mode .contact-form label {
   color: #ffffff; /* White text for dark mode */
 }
+/* Dark mode style for unselected radio button labels */
+body.dark-mode .radio-options label {
+  color: #000000; /* Black text for unselected labels */
+  background-color: #ffffff; /* Optional to enhance contrast */
+  border: 1px solid #ffffff; /* Match the white background */
+}
+
+/* Style for selected radio button labels */
+body.dark-mode .radio-options input[type="radio"]:checked + label {
+  color: #ffffff; /* White text for selected labels */
+  background-color: #333333; /* Dark background for contrast */
+  border: 1px solid #333333; /* Match the dark background */
+}
+
+/* Optional: Add hover effect */
+body.dark-mode .radio-options label:hover {
+  background-color: #dddddd; /* Slightly lighter background */
+  color: #000000; /* Keep text black */
+}
+
 
 =======
 >>>>>>> 70249bfa68f43984cce3e3cd7636b8b5ff7195df
