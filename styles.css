@@ -1042,7 +1042,6 @@ body.dark-mode .footer {
   background-color: transparent;
   color: #ffffff; /* Ensure footer text is still visible */
 } 
-<<<<<<< HEAD
 /* Dark mode FAQ answer text */
 body.dark-mode .faq-answer p {
   color: black;
@@ -1114,7 +1113,5 @@ body.dark-mode .radio-options label:hover {
 }
 
 
-=======
->>>>>>> 70249bfa68f43984cce3e3cd7636b8b5ff7195df
 
  
