@@ -1058,5 +1058,24 @@ body.dark-mode .hero .submit-button:hover {
   background-color: #66bb6a; /* Slightly lighter green on hover */
   color: #ffffff; /* Keep the text white */
 }
+/* Hamburger menu icon in dark mode */
+body.dark-mode .hamburger-label,
+body.dark-mode .exit-label {
+  color: #ffffff; /* White color for the icon */
+}
+
+/* Mobile menu content in dark mode */
+body.dark-mode .mobile-menu {
+  background-color: #1e1e1e; /* Dark background for the menu */
+}
+
+body.dark-mode .mobile-menu .nav-item {
+  color: #ffffff; /* White color for the menu links */
+}
+
+body.dark-mode .mobile-menu .nav-item:hover {
+  color: #bbbbbb; /* Slightly lighter on hover */
+}
+
 
  
