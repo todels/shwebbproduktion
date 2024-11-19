@@ -22,12 +22,12 @@ const updateHandwrittenImages = (isDarkMode) => {
 if (localStorage.getItem("darkMode") === "true") {
     body.classList.add("dark-mode");
     if (toggleIcon) toggleIcon.src = "icons/moon.svg"; // Moon icon for Dark Mode
-    if (darkModeToggle) darkModeToggle.querySelector("span").innerText = "Dark";
+    if (darkModeToggle) darkModeToggle.querySelector("span").innerText = "Mörk";
     updateHandwrittenImages(true); // Apply dark mode images
 } else {
     body.classList.remove("dark-mode");
     if (toggleIcon) toggleIcon.src = "icons/sun.svg"; // Sun icon for Light Mode
-    if (darkModeToggle) darkModeToggle.querySelector("span").innerText = "Light";
+    if (darkModeToggle) darkModeToggle.querySelector("span").innerText = "Ljus";
     updateHandwrittenImages(false); // Apply light mode images
 }
 
@@ -39,10 +39,10 @@ if (darkModeToggle) {
         // Update icons and text
         if (isDarkMode) {
             if (toggleIcon) toggleIcon.src = "icons/moon.svg";
-            if (darkModeToggle) darkModeToggle.querySelector("span").innerText = "Dark";
+            if (darkModeToggle) darkModeToggle.querySelector("span").innerText = "Mörk";
         } else {
             if (toggleIcon) toggleIcon.src = "icons/sun.svg";
-            if (darkModeToggle) darkModeToggle.querySelector("span").innerText = "Light";
+            if (darkModeToggle) darkModeToggle.querySelector("span").innerText = "Ljus";
         }
 
         // Update handwritten images
