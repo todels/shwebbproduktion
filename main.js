@@ -2,48 +2,55 @@
 const darkModeToggle = document.getElementById("dark-mode-toggle");
 const toggleIcon = document.getElementById("toggle-icon");
 const body = document.body;
-const handwrittenImage = document.querySelector('.hero img[src*="handwritten_1.svg"]'); // Select the SVG if it exists
+
+// Select SVG elements
+const handwrittenImageIndex = document.querySelector('.hero img[src*="handwritten_1.svg"]'); // Select handwritten_1.svg
+const handwrittenImageGuides = document.querySelector('.guide-header img[src*="handwritten_2.svg"]'); // Select handwritten_2.svg
+
+// Function to update handwritten images
+const updateHandwrittenImages = (isDarkMode) => {
+    if (isDarkMode) {
+        if (handwrittenImageIndex) handwrittenImageIndex.src = "other/handwritten_1_dm.svg";
+        if (handwrittenImageGuides) handwrittenImageGuides.src = "other/handwritten_2_dm.svg";
+    } else {
+        if (handwrittenImageIndex) handwrittenImageIndex.src = "other/handwritten_1.svg";
+        if (handwrittenImageGuides) handwrittenImageGuides.src = "other/handwritten_2.svg";
+    }
+};
 
 // Check for dark mode state in localStorage and apply it on page load
 if (localStorage.getItem("darkMode") === "true") {
-  body.classList.add("dark-mode");
-  if (toggleIcon) toggleIcon.src = "icons/moon.svg"; // Moon icon for Dark Mode
-  if (darkModeToggle) darkModeToggle.querySelector("span").innerText = "Dark";
-  if (handwrittenImage) {
-    handwrittenImage.src = "other/handwritten_1_dm.svg"; // Dark Mode version of handwritten
-  }
+    body.classList.add("dark-mode");
+    if (toggleIcon) toggleIcon.src = "icons/moon.svg"; // Moon icon for Dark Mode
+    if (darkModeToggle) darkModeToggle.querySelector("span").innerText = "Dark";
+    updateHandwrittenImages(true); // Apply dark mode images
 } else {
-  body.classList.remove("dark-mode");
-  if (toggleIcon) toggleIcon.src = "icons/sun.svg"; // Sun icon for Light Mode
-  if (darkModeToggle) darkModeToggle.querySelector("span").innerText = "Light";
-  if (handwrittenImage) {
-    handwrittenImage.src = "other/handwritten_1.svg"; // Light Mode version of handwritten
-  }
+    body.classList.remove("dark-mode");
+    if (toggleIcon) toggleIcon.src = "icons/sun.svg"; // Sun icon for Light Mode
+    if (darkModeToggle) darkModeToggle.querySelector("span").innerText = "Light";
+    updateHandwrittenImages(false); // Apply light mode images
 }
 
 // Add event listener to toggle button
 if (darkModeToggle) {
-  darkModeToggle.addEventListener("click", () => {
-    const isDarkMode = body.classList.toggle("dark-mode");
+    darkModeToggle.addEventListener("click", () => {
+        const isDarkMode = body.classList.toggle("dark-mode");
 
-    // Update icons and text
-    if (isDarkMode) {
-      if (toggleIcon) toggleIcon.src = "icons/moon.svg";
-      if (darkModeToggle) darkModeToggle.querySelector("span").innerText = "Dark";
-      if (handwrittenImage) {
-        handwrittenImage.src = "other/handwritten_1_dm.svg"; // Dark Mode version of handwritten
-      }
-    } else {
-      if (toggleIcon) toggleIcon.src = "icons/sun.svg";
-      if (darkModeToggle) darkModeToggle.querySelector("span").innerText = "Light";
-      if (handwrittenImage) {
-        handwrittenImage.src = "other/handwritten_1.svg"; // Light Mode version of handwritten
-      }
-    }
+        // Update icons and text
+        if (isDarkMode) {
+            if (toggleIcon) toggleIcon.src = "icons/moon.svg";
+            if (darkModeToggle) darkModeToggle.querySelector("span").innerText = "Dark";
+        } else {
+            if (toggleIcon) toggleIcon.src = "icons/sun.svg";
+            if (darkModeToggle) darkModeToggle.querySelector("span").innerText = "Light";
+        }
 
-    // Save preference to localStorage
-    localStorage.setItem("darkMode", isDarkMode);
-  });
+        // Update handwritten images
+        updateHandwrittenImages(isDarkMode);
+
+        // Save preference to localStorage
+        localStorage.setItem("darkMode", isDarkMode);
+    });
 } else {
-  console.error("Dark mode toggle button not found.");
+    console.error("Dark mode toggle button not found.");
 }
