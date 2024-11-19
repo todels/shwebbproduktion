@@ -1076,6 +1076,22 @@ body.dark-mode .mobile-menu .nav-item {
 body.dark-mode .mobile-menu .nav-item:hover {
   color: #bbbbbb; /* Slightly lighter on hover */
 }
+/* Dark mode style for "Skicka ansökan" button in contact section */
+body.dark-mode .contact-section button {
+  background-color: #4caf50; /* Dark green matching the hero button */
+  color: #ffffff; /* White text for readability */
+  border: 1px solid #4caf50; /* Border matches background color */
+}
+
+/* Hover effect for the "Skicka ansökan" button */
+body.dark-mode .contact-section button:hover {
+  background-color: #66bb6a; /* Slightly lighter green on hover */
+  color: #ffffff; /* Keep the text white */
+}
+/* Dark mode style for form labels */
+body.dark-mode .contact-form label {
+  color: #ffffff; /* White text for dark mode */
+}
 
 
  
