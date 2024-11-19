@@ -1046,5 +1046,17 @@ body.dark-mode .footer {
 body.dark-mode .faq-answer p {
   color: black;
 }
+/* Specific style for "Få tidig tillgång" button in hero section in dark mode */
+body.dark-mode .hero .submit-button {
+  background-color: #4caf50; /* Dark green that contrasts well with dark background */
+  color: #ffffff; /* White text for readability */
+  border: 1px solid #4caf50; /* Border matches background color for consistency */
+}
+
+/* Hover effect for the hero button in dark mode */
+body.dark-mode .hero .submit-button:hover {
+  background-color: #66bb6a; /* Slightly lighter green on hover */
+  color: #ffffff; /* Keep the text white */
+}
 
  
