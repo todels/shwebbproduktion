@@ -1,13 +1,13 @@
-// Get necessary elements
+// Hämta nödvändiga element som behövs för att hantera mörkt läge och SVG-bilder
 const darkModeToggle = document.getElementById("dark-mode-toggle");
 const toggleIcon = document.getElementById("toggle-icon");
 const body = document.body;
 
-// Select SVG elements
-const handwrittenImageIndex = document.querySelector('.hero img[src*="handwritten_1.svg"]'); // Select handwritten_1.svg
-const handwrittenImageGuides = document.querySelector('.guide-header img[src*="handwritten_2.svg"]'); // Select handwritten_2.svg
+// Identifiera SVG-bilder som ska uppdateras beroende på om mörkt eller ljust läge används
+const handwrittenImageIndex = document.querySelector('.hero img[src*="handwritten_1.svg"]');
+const handwrittenImageGuides = document.querySelector('.guide-header img[src*="handwritten_2.svg"]');
 
-// Function to update handwritten images
+// Funktion för att byta ut bilderna baserat på om mörkt läge är aktiverat
 const updateHandwrittenImages = (isDarkMode) => {
     if (isDarkMode) {
         if (handwrittenImageIndex) handwrittenImageIndex.src = "other/handwritten_1_dm.svg";
@@ -18,25 +18,24 @@ const updateHandwrittenImages = (isDarkMode) => {
     }
 };
 
-// Check for dark mode state in localStorage and apply it on page load
+// Kontrollera och tillämpa sparat tema från localStorage när sidan laddas
 if (localStorage.getItem("darkMode") === "true") {
     body.classList.add("dark-mode");
-    if (toggleIcon) toggleIcon.src = "icons/moon.svg"; // Moon icon for Dark Mode
+    if (toggleIcon) toggleIcon.src = "icons/moon.svg"; 
     if (darkModeToggle) darkModeToggle.querySelector("span").innerText = "Mörk";
-    updateHandwrittenImages(true); // Apply dark mode images
+    updateHandwrittenImages(true);
 } else {
     body.classList.remove("dark-mode");
-    if (toggleIcon) toggleIcon.src = "icons/sun.svg"; // Sun icon for Light Mode
+    if (toggleIcon) toggleIcon.src = "icons/sun.svg";
     if (darkModeToggle) darkModeToggle.querySelector("span").innerText = "Ljus";
-    updateHandwrittenImages(false); // Apply light mode images
+    updateHandwrittenImages(false);
 }
 
-// Add event listener to toggle button
+// Lägg till händelsehanterare för att användaren ska kunna växla mellan mörkt och ljust läge
 if (darkModeToggle) {
     darkModeToggle.addEventListener("click", () => {
         const isDarkMode = body.classList.toggle("dark-mode");
 
-        // Update icons and text
         if (isDarkMode) {
             if (toggleIcon) toggleIcon.src = "icons/moon.svg";
             if (darkModeToggle) darkModeToggle.querySelector("span").innerText = "Mörk";
@@ -45,12 +44,10 @@ if (darkModeToggle) {
             if (darkModeToggle) darkModeToggle.querySelector("span").innerText = "Ljus";
         }
 
-        // Update handwritten images
         updateHandwrittenImages(isDarkMode);
-
-        // Save preference to localStorage
         localStorage.setItem("darkMode", isDarkMode);
     });
 } else {
-    console.error("Dark mode toggle button not found.");
+    console.error("Mörkt läge-knappen hittades inte.");
 }
+

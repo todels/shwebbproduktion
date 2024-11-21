@@ -917,16 +917,16 @@ p {
   }
 
   .signup-form {
-    width: 90%; /* Reduce width to fit smaller screens */
-    max-width: none; /* Remove max-width constraint */
+    width: 90%; 
+    max-width: none; 
   }
 
   .submit-button {
-    padding: 14px 16px; /* Adjust padding for smaller screens */
+    padding: 14px 16px; 
   }
 }
 
-/* Dark Mode Styles */
+/* Bakgrund och textfärger för mörkt läge */
 body.dark-mode {
   background-color: #121212;
   color: #ffffff;
@@ -949,7 +949,7 @@ body.dark-mode .footer {
   color: #ffffff;
 }
 
-/* Dark Mode Toggle Styles */
+/* Utseende för knappen som byter mellan mörkt och ljust läge */
 .dark-mode-toggle {
   display: flex;
   align-items: center;
@@ -975,7 +975,7 @@ body.dark-mode .dark-mode-toggle img {
   filter: invert(1);
 }
 
-/* Buttons in Dark Mode */
+/* Anpassade stilar för knappar i mörkt läge, inklusive hover-effekter */
 body.dark-mode .submit-button, 
 body.dark-mode .nav-cta-button, 
 body.dark-mode .cta-large, 
@@ -993,13 +993,13 @@ body.dark-mode .cards .card button:hover {
   color: #000000;
 }
 
-/* Logos in Dark Mode */
+/* Bilder och logotyper anpassas för mörkt läge */
 body.dark-mode .navbar .logo img, 
 body.dark-mode .footer .footer-section img {
   filter: invert(1);
 }
 
-/* Footer Links in Dark Mode */
+/* Stilar för länkar i sidfoten och hur de ser ut vid hover */
 body.dark-mode .footer a, 
 body.dark-mode .footer-nav ul li a, 
 body.dark-mode .footer-social ul li a {
@@ -1012,104 +1012,99 @@ body.dark-mode .footer-social ul li a:hover {
   color: #bbbbbb;
 }
 
-/* Social Media Icons in Dark Mode */
+/* Sociala medier-ikoner justeras för mörkt läge */
 body.dark-mode .footer-social ul li a img {
   filter: invert(1);
 }
 
-/* Toggle Button Moon Icon in Dark Mode */
+/* Specifika stilar för mörka och ljusa ikoner på knappen */
 body.dark-mode .dark-mode-toggle img {
-  filter: invert(1);
-}
- 
-/* Ensure sun.svg and moon.svg are visible */
-body.dark-mode .dark-mode-toggle img {
-  filter: invert(0); /* Moon icon visible on dark background */
+  filter: invert(0); /* Gör månikonen synlig i mörkt läge */
 }
 
 body.light-mode .dark-mode-toggle img {
-  filter: invert(0); /* Sun icon visible on light background */
+  filter: invert(0); /* Gör solikonen synlig i ljust läge */
 }
 
-/* Remove footer background color */
+/* Bakgrund på sidfoten tas bort för att smälta in */
 .footer {
   background-color: transparent;
 }
 
-/* In Dark Mode, the footer will blend with the body */
 body.dark-mode .footer {
   background-color: transparent;
-  color: #ffffff; /* Ensure footer text is still visible */
-} 
-/* Dark mode FAQ answer text */
+  color: #ffffff;
+}
+
+/* FAQ-text i mörkt läge */
 body.dark-mode .faq-answer p {
   color: black;
 }
-/* Specific style for "Få tidig tillgång" button in hero section in dark mode */
+
+/* Anpassning för knappen "Få tidig tillgång" i hero-sektionen i mörkt läge */
 body.dark-mode .hero .submit-button {
-  background-color: #4caf50; /* Dark green that contrasts well with dark background */
-  color: #ffffff; /* White text for readability */
-  border: 1px solid #4caf50; /* Border matches background color for consistency */
+  background-color: #4caf50;
+  color: #ffffff;
+  border: 1px solid #4caf50;
 }
 
-/* Hover effect for the hero button in dark mode */
 body.dark-mode .hero .submit-button:hover {
-  background-color: #66bb6a; /* Slightly lighter green on hover */
-  color: #ffffff; /* Keep the text white */
+  background-color: #66bb6a;
+  color: #ffffff;
 }
-/* Hamburger menu icon in dark mode */
+
+/* Hamburgermeny och mobilmeny i mörkt läge */
 body.dark-mode .hamburger-label,
 body.dark-mode .exit-label {
-  color: #ffffff; /* White color for the icon */
+  color: #ffffff;
 }
 
-/* Mobile menu content in dark mode */
 body.dark-mode .mobile-menu {
-  background-color: #1e1e1e; /* Dark background for the menu */
+  background-color: #1e1e1e;
 }
 
 body.dark-mode .mobile-menu .nav-item {
-  color: #ffffff; /* White color for the menu links */
+  color: #ffffff;
 }
 
 body.dark-mode .mobile-menu .nav-item:hover {
-  color: #bbbbbb; /* Slightly lighter on hover */
+  color: #bbbbbb;
 }
-/* Dark mode style for "Skicka ansökan" button in contact section */
+
+/* Anpassade stilar för knappen "Skicka ansökan" i kontaktsektionen */
 body.dark-mode .contact-section button {
-  background-color: #4caf50; /* Dark green matching the hero button */
-  color: #ffffff; /* White text for readability */
-  border: 1px solid #4caf50; /* Border matches background color */
+  background-color: #4caf50;
+  color: #ffffff;
+  border: 1px solid #4caf50;
 }
 
-/* Hover effect for the "Skicka ansökan" button */
 body.dark-mode .contact-section button:hover {
-  background-color: #66bb6a; /* Slightly lighter green on hover */
-  color: #ffffff; /* Keep the text white */
+  background-color: #66bb6a;
+  color: #ffffff;
 }
-/* Dark mode style for form labels */
+
+/* Formulär och radioknappar anpassas för mörkt läge */
 body.dark-mode .contact-form label {
-  color: #ffffff; /* White text for dark mode */
+  color: #ffffff;
 }
-/* Dark mode style for unselected radio button labels */
+
 body.dark-mode .radio-options label {
-  color: #000000; /* Black text for unselected labels */
-  background-color: #ffffff; /* Optional to enhance contrast */
-  border: 1px solid #ffffff; /* Match the white background */
+  color: #000000;
+  background-color: #ffffff;
+  border: 1px solid #ffffff;
 }
 
-/* Style for selected radio button labels */
 body.dark-mode .radio-options input[type="radio"]:checked + label {
-  color: #ffffff; /* White text for selected labels */
-  background-color: #333333; /* Dark background for contrast */
-  border: 1px solid #333333; /* Match the dark background */
+  color: #ffffff;
+  background-color: #333333;
+  border: 1px solid #333333;
 }
 
-/* Optional: Add hover effect */
 body.dark-mode .radio-options label:hover {
-  background-color: #dddddd; /* Slightly lighter background */
-  color: #000000; /* Keep text black */
+  background-color: #dddddd;
+  color: #000000;
 }
+
 
 
 
